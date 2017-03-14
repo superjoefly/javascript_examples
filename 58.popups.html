@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Popups</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Popups</h1>
+
+		<p>JavaScript has three kinds of popup boxes: alert box, confirm box, and prompt box.</p>
+
+		<h2>Alert Box</h2>
+
+		<p>Display an alert box:</p>
+
+		<button onclick="myFunction1()">Display Alert</button>
+
+		<script>
+		function myFunction1() {
+			alert("Hello There!")
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				alert("Hello There!")
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Alert Box with Line Breaks</h2>
+
+		<p>Display an alert box with line breaks:</p>
+
+		<button onclick="myFunction2()">Display Alert</button>
+
+		<script>
+		function myFunction2() {
+			alert("Hello There!\nHow are you?");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				alert("Hello There!\nHow are you?");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Confirm Box</h2>
+
+		<p>Display a confirm box:</p>
+
+		<button onclick="myFunction3()">Display Confirm</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		function myFunction3() {
+			var x;
+			if (confirm("Press a button!") == true) {
+				x = "You pressed OK!";
+			} else {
+				x = "You pressed cancel!";
+			}
+			document.getElementById("demo3").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				var x;
+				if (confirm("Press a button!") == true) {
+					x = "You pressed OK!";
+				} else {
+					x = "You pressed cancel!";
+				}
+				document.getElementById("demo3").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Prompt Box/ Alert</h2>
+
+		<p>Display a Prompt Box and then a Response Alert</p>
+
+		<button onclick="myFunction4()">Display Prompt</button>
+
+		<script>
+		function myFunction4() {
+			var person = prompt("What is your name?");
+			if (person != null) {
+			alert ("Hey, there " + person + " It's nice to meet you!");
+			}
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction4() {
+				var person = prompt("What is your name?");
+				if (person != null) {
+				alert ("Hey, there " + person + " It's nice to meet you!");
+				}
+			}
+		</code></pre>
+
+	</body>
+
+</html>

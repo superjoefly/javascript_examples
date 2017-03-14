@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Random</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Random</h1>
+
+		<h2>Math.random()</h2>
+
+		<p><strong>Math.random()</strong> returns a random number between 0 (inclusive), and 1 (exclusive):</p>
+
+		<p id="demo1"></p>
+
+		<script>
+			document.getElementById("demo1").innerHTML = Math.random();
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo1").innerHTML = Math.random();
+		</code></pre>
+
+		<hr></hr>
+
+			<h2>Math.floor(Math.random())</h2>
+
+			<p>Return a number between 0 and 10:</p>
+
+			<p id="demo2"></p>
+
+			<script>
+				document.getElementById("demo2").innerHTML =
+				Math.floor(Math.random() * 11);
+			</script>
+
+			<pre><code class="language-javascript">
+				document.getElementById("demo2").innerHTML =
+				Math.floor(Math.random() * 11);
+			</code></pre>
+
+			<hr></hr>
+
+		<p>Return a number between 0 and 99:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		  document.getElementById("demo3").innerHTML =
+			Math.floor(Math.random() * 100);
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo3").innerHTML =
+			Math.floor(Math.random() * 100);
+		</code></pre>
+
+		<hr />
+
+		<p>Return a number between 0 and 100:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		  document.getElementById("demo4").innerHTML =
+			Math.floor(Math.random() * 101);
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo4").innerHTML =
+			Math.floor(Math.random() * 101);
+		</code></pre>
+
+		<hr />
+
+		<p>Return a number between 1 and 10:</p>
+
+		<p id="demo5"></p>
+
+		<script>
+			document.getElementById("demo5").innerHTML =
+			Math.floor(Math.random() * 10) + 1;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo5").innerHTML =
+			Math.floor(Math.random() * 10) + 1;
+		</code></pre>
+
+		<hr />
+
+		<p>Return a number between 1 and 100:</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		document.getElementById("demo6").innerHTML =
+		Math.floor(Math.random() * 100) + 1;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo6").innerHTML =
+			Math.floor(Math.random() * 100) + 1;
+		</code></pre>
+
+		<hr />
+
+		<h2>Proper Random Function</h2>
+
+		<p>Return a random number between min (included) and max (excluded):</p>
+
+		<p id="demo7"></p>
+
+		<button onclick="document.getElementById('demo7').innerHTML =
+		getRndInteger(0,10)">Click Me!</button>
+
+		<pre><code class="language-javascript">
+			/button onclick="document.getElementById('demo7').innerHTML = getRndInteger(0,10)">Click Me!/button
+		</code></pre>
+
+		<script>
+		function getRndInteger(min, max) {
+			return Math.floor(Math.random() * (max - min)) + min;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function getRndInteger(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+		</code></pre>
+
+		<hr />
+
+		<p>Return a random number between min and max (both included):</p>
+
+		<p id="demo8"></p>
+
+		<button onclick="document.getElementById('demo8').innerHTML = getRndInt(1,10)">Click Me!</button>
+
+		<pre><code class="language-javascript">
+			button onclick="document.getElementById('demo8').innerHTML = getRndInt(1,10)">Click Me!/button
+		</code></pre>
+
+		<script>
+		function getRndInt(min,max) {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function getRndInt(min,max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

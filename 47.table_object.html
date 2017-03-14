@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Table Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Table Object</h1>
+
+		<table id="myTable" class="w3-table-all">
+			<tr>
+				<th>Method</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>document.createElement(element)</td>
+				<td>Create an HTML element</td>
+			</tr>
+			<tr>
+				<td>document.removeChild(element)</td>
+				<td>Remove an HTML element</td>
+			</tr>
+			<tr>
+				<td>document.appendChild(element)</td>
+				<td>Add an HTML element</td>
+			</tr>
+			<tr>
+				<td>document.replaceChild(element)</td>
+				<td>Replace an HTML element</td>
+			</tr>
+			<tr>
+				<td>document.write(text)</td>
+				<td>Write into the HTML output stream</td>
+			</tr>
+		</table>
+
+		<h2>Change Border</h2>
+
+		<p>Change the width of a table's border:</p>
+
+		<button onclick="myFunction1()">Change Border</button>
+
+		<script>
+		function myFunction1() {
+		document.getElementById("myTable").style.border="5px solid"
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+			document.getElementById("myTable").style.border="5px solid"
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Inner HTML</h2>
+
+		<p>Find the inner HTML of a cell</p>
+
+		<button onclick="myFunction2()">Get innerHTML</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function myFunction2() {
+			var x = document.getElementById("myTable").rows[0].cells;
+			document.getElementById("demo2").innerHTML = x[0].innerHTML;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				var x = document.getElementById("myTable").rows[0].cells;
+				document.getElementById("demo2").innerHTML = x[0].innerHTML;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Create Caption</h2>
+
+		<p>Create a caption for a table (see result above):</p>
+
+		<input type="button" onclick="createCaption('myTable')" value="Create caption">
+
+		<script>
+		function createCaption(id) {
+		    document.getElementById(id).createCaption().innerHTML = "<h2>My new caption</h2>";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function createCaption(id) {
+			    document.getElementById(id).createCaption().innerHTML = "<h2>My new caption</h2>";
+			}
+		</code></pre>
+
+		<hr />
+
+		<table id="myTable2" class="w3-table-all">
+			<tr>
+				<th>Method</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>document.createElement(element)</td>
+				<td>Create an HTML element</td>
+			</tr>
+			<tr>
+				<td>document.removeChild(element)</td>
+				<td>Remove an HTML element</td>
+			</tr>
+			<tr>
+				<td>document.appendChild(element)</td>
+				<td>Add an HTML element</td>
+			</tr>
+			<tr>
+				<td>document.replaceChild(element)</td>
+				<td>Replace an HTML element</td>
+			</tr>
+			<tr>
+				<td>document.write(text)</td>
+				<td>Write into the HTML output stream</td>
+			</tr>
+		</table>
+
+		<hr />
+
+		<h2>Delete Rows</h2>
+
+		<p>Delete rows from a table:</p>
+
+		<button onclick="deleteRows()">Delete Rows</button>
+
+		<script>
+		function deleteRows() {
+			document.getElementById("myTable2").deleteRow(1);
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function deleteRows() {
+				document.getElementById("myTable2").deleteRow(1);
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Add Rows</h2>
+
+		<p>Add rows to a table:</p>
+
+		<button onclick="insRow('myTable2')">Insert Row</button>
+
+		<script>
+		function insRow(id) {
+			var x = document.getElementById(id).insertRow(1);
+			var y = x.insertCell(0);
+			var z = x.insertCell(1);
+			y.innerHTML = z.innerHTML = "New";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function insRow(id) {
+				var x = document.getElementById(id).insertRow(1);
+				var y = x.insertCell(0);
+				var z = x.insertCell(1);
+				y.innerHTML = z.innerHTML = "New";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Change Content</h2>
+
+		<p>Change the content of a table cell (see result above):</p>
+
+		<button onclick="changeContent('myTable2', 0, 0, 'Hello')">Change Content</button>
+
+		<script>
+		function changeContent(id, row, cell, content) {
+		    var x = document.getElementById(id).rows[row].cells;
+		    x[cell].innerHTML = content;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function changeContent(id, row, cell, content) {
+			    var x = document.getElementById(id).rows[row].cells;
+			    x[cell].innerHTML = content;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

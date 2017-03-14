@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Syntax</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Syntax</h1>
+
+		<p>JavaScrip <b>syntax</b> is the set of rules defining how JavaScript programs are constructed.</p>
+
+		<h2>Statements</h2>
+
+		<p>Statements are separated by semicolons.</p>
+
+		<p>The variables x, y, and z, are assigned the values 5, 6, and 11.</p>
+
+		<p>Then the value of z is displayed in the paragraph below:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		var x, y, z;
+		x = 5;
+		y = 6;
+		z = x + y;
+		document.getElementById("demo1").innerHTML = z;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x, y, z;
+			x = 5;
+			y = 6;
+			z = x + y;
+			document.getElementById("demo1").innerHTML = z;
+		</code></pre>
+
+		<hr />
+
+		<h2>Numbers</h2>
+
+		<p>Numbers can be written with or without decimals:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		document.getElementById("demo2").innerHTML = 5.5;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo2").innerHTML = 5.5;
+		</code></pre>
+
+		<hr />
+
+		<h2>Strings</h2>
+
+		<p>Strings can be written with single or double quotes:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		document.getElementById("demo3").innerHTML = "Hello JavaScript!";
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo3").innerHTML = "Hello JavaScript!";
+		</code></pre>
+
+		<hr />
+
+		<h2>Variables</h2>
+
+		<p>In this example, x is defined as a variable. Then x is assigned the value of 6:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var x;
+		x = 6;
+		document.getElementById("demo4").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x;
+			x = 6;
+			document.getElementById("demo4").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Operators</h2>
+
+		<p>JavaScript uses arithmetic operators to compute values (just like algebra):</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		document.getElementById("demo5").innerHTML = (5 + 5) * 10;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo5").innerHTML = (5 + 5) * 10;
+		</code></pre>
+
+		<hr />
+
+		<h2>Assignment</h2>
+
+		<p>In JavaScript, the = operator is used to assign values to variables:</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		var x, y;
+		x = 5;
+		y = 13;
+		document.getElementById("demo6").innerHTML = x + y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x, y;
+			x = 5;
+			y = 13;
+			document.getElementById("demo6").innerHTML = x + y;
+		</code></pre>
+
+		<hr />
+
+		<h2>Expressions (using constants)</h2>
+
+		<p>JavaScript expressions compute to values:</p>
+
+		<p id="demo7"></p>
+
+		<script>
+		document.getElementById("demo7").innerHTML = 8 * 8;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo7").innerHTML = 8 * 8;
+		</code></pre>
+
+		<hr />
+
+		<h2>Expressions (using strings)</h2>
+
+		<p>Expressions compute to values:</p>
+
+		<p id="demo8"></p>
+
+		<script>
+		document.getElementById("demo8").innerHTML = "Why" + " Me!";
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo8").innerHTML = "Why" + " Me!";
+		</code></pre>
+
+		<hr />
+
+		<h2>Expressions (using variables)</h2>
+
+		<p>Expressions compute to values:</p>
+
+		<p id="demo9"></p>
+
+		<script>
+		var x, y;
+		x = 5;
+		y = 8;
+		document.getElementById("demo9").innerHTML = x + y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x, y;
+			x = 5;
+			y = 8;
+			document.getElementById("demo9").innerHTML = x + y;
+		</code></pre>
+
+		<hr />
+
+		<h2>Keywords</h2>
+
+		<p>JavaScript keywords play a special role. The <b>var</b> keyword, for example, creates variables:</p>
+
+		<p id="demo10"></p>
+
+		<script>
+		var x, y;
+		x = 8 + 8;
+		y = x * 10;
+		document.getElementById("demo10").innerHTML = y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x, y;
+			x = 8 + 8;
+			y = x * 10;
+			document.getElementById("demo10").innerHTML = y;
+		</code></pre>
+
+		<hr />
+
+		<h2>Comments</h2>
+
+		<p>JavaScript comments are not executed:</p>
+
+		<p id="demo11"></p>
+
+		<script>
+		var x;
+		x = 9;
+		// x = 10; This comment will not be executed
+
+		document.getElementById("demo11").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x;
+			x = 9;
+			// x = 10; This comment will not be executed
+
+			document.getElementById("demo11").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Case Sensitive</h2>
+
+		<p>JavaScript is case sensitive...lastname and lastName are not the same:</p>
+
+		<p id="demo12"></p>
+		<p id="demo13"></p>
+
+		<script>
+		var lastname = "Atwood";
+		var lastName = "Doe";
+		document.getElementById("demo12").innerHTML = lastname;
+		document.getElementById("demo13").innerHTML = lastName;
+		</script>
+
+		<pre><code class="language-javascript">
+			var lastname = "Atwood";
+			var lastName = "Doe";
+			document.getElementById("demo12").innerHTML = lastname;
+			document.getElementById("demo13").innerHTML = lastName;
+		</code></pre>
+
+	</body>
+
+</html>

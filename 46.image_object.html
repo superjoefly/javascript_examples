@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Image Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Image Object</h1>
+
+		<img src="images/flowers1.jpg" id="flowers" alt="pretty flowers" height="275" width="350" />
+
+		<h2>Alternate Text</h2>
+
+		<p>Get the alt text for an image:</p>
+
+		<button onclick="myFunction1()">Get Text</button>
+
+		<p id="demo1"></p>
+
+		<script>
+		function myFunction1() {
+			var x = document.getElementById("flowers").alt;
+			document.getElementById("demo1").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				var x = document.getElementById("flowers").alt;
+				document.getElementById("demo1").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Height</h2>
+
+		<p>Get the height of an image:</p>
+
+		<button onclick="myFunction2()">Get Height</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function myFunction2() {
+			var x = document.getElementById("flowers").height;
+			document.getElementById("demo2").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				var x = document.getElementById("flowers").height;
+				document.getElementById("demo2").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Get Source</h2>
+
+		<p>Get the value of the source attribute:</p>
+
+		<button onclick="myFunction3()">Get Source</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		function myFunction3() {
+			var x = document.getElementById("flowers").src;
+			document.getElementById("demo3").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				var x = document.getElementById("flowers").src;
+				document.getElementById("demo3").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Replace</h2>
+
+		<img src="images/flowers1.jpg" id="flowers2" alt="pretty flowers" height="275" width="350" />
+
+		<p>Replace the image by changing its source attribute:</p>
+
+		<button onclick="myFunction4()">Change Image</button>
+
+		<script>
+		function myFunction4() {
+			document.getElementById("flowers2").src="images/flowers2.jpg";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction4() {
+				document.getElementById("flowers2").src="images/flowers2.jpg";
+			}
+		</code></pre>
+		
+	</body>
+
+</html>

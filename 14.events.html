@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Events</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>Events</h1>
+
+		<p>HTML events are "things" that happen to HTML elements.</p>
+
+		<p>When JavaScript is used in HTML pages, JavaScript can "react" on these events.</p>
+
+		<hr />
+
+		<h2>Onclick Event (inline)</h2>
+
+		<p id="demo1">This is a paragraph!</p>
+
+		<button onclick="document.getElementById('demo1').innerHTML = 'This paragraph has been changed!'">Click Me!</button>
+
+		<pre><code class="language-javascript">
+			/button onclick="document.getElementById('demo1').innerHTML = 'This paragraph has been changed!'" /button
+		</code></pre>
+
+		<hr />
+
+		<h2>Onclick Changes Its Own Element</h2>
+
+		<button onclick="this.innerHTML=Date()">The time is?</button>
+
+		<pre><code>
+			/button onclick="this.innerHTML=Date()">The time is?/button
+		</code></pre>
+
+		<hr />
+
+		<h2>Onclick Event Calls a Function</h2>
+
+		<p id="demo2"></p>
+
+		<button onclick="displayDate()">Display Date</button>
+
+		<pre><code class="language-javascript">
+			/button onclick="displayDate()">Display Date/button
+		</code></pre>
+
+		<script>
+		function displayDate(){
+			document.getElementById("demo2").innerHTML = Date();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function displayDate(){
+				document.getElementById("demo2").innerHTML = Date();
+			}
+		</code></pre>
+
+	</body>
+
+</html>

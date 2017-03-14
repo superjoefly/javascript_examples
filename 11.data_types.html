@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Data Types</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>Data Types</h1>
+
+		<p>JavaScript variables can hold many <b>data types</b>: numbers, string, objects and more:</p>
+
+		<hr />
+
+		<h2>Declare (create) Strings</h2>
+
+		<p id="demo1"></p>
+
+		<script>
+		var carName1 = "Volvo";
+		var carName2 = 'Audi';
+		document.getElementById("demo1").innerHTML =
+		carName1 + "<br />" + carName2;
+		</script>
+
+		<pre><code class="language-javascript">
+			var carName1 = "Volvo";
+			var carName2 = 'Audi';
+			document.getElementById("demo1").innerHTML =
+			carName1 + carName2; //add line breaks
+		</code></pre>
+
+		<hr />
+
+		<h2>Declare (create) Numbers</h2>
+
+		<p id="demo2"></p>
+
+		<script>
+		var x1 = 34;
+		var x2 = 34.00;
+		var y = 123e5;
+		var z = 123e-5;
+		document.getElementById("demo2").innerHTML =
+		x1 + "<br />" + x2 + "<br />" + y + "<br />" + z;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x1 = 34;
+			var x2 = 34.00;
+			var y = 123e5;
+			var z = 123e-5;
+			document.getElementById("demo2").innerHTML =
+			x1 + x2 + y + z; //add line breaks
+		</code></pre>
+
+		<hr />
+
+		<h2>Declare (create) an Array</h2>
+
+		<p id="demo3"></p>
+
+		<script>
+		var x = ["Saab", "Volvo", "BMW"];
+
+		document.getElementById("demo3").innerHTML = x[1];
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = ["Saab", "Volvo", "BMW"];
+
+			document.getElementById("demo3").innerHTML = x[1];
+		</code></pre>
+
+		<hr />
+
+		<h2>Declare (create) an Object</h2>
+
+		<p id="demo4"></p>
+
+		<script>
+		var person = {
+			firstName : "John",
+			lastName : "Doe",
+			eyeColor : "blue",
+			age : 49
+		};
+
+		document.getElementById("demo4").innerHTML = person.eyeColor;
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {
+				firstName : "John",
+				lastName : "Doe",
+				eyeColor : "blue",
+				age : 49
+			};
+
+			document.getElementById("demo4").innerHTML = person.eyeColor;
+		</code></pre>
+
+		<hr />
+
+		<h2>Find the Type of a Variable</h2>
+
+		<p id="demo5"></p>
+
+		<script>
+		document.getElementById("demo5").innerHTML =
+		typeof "" + "<br />" +
+		typeof "Joey" + "<br />" +
+		typeof "John Doe" + "<br />" +
+		typeof 0 + "<br />" +
+		typeof 314 + "<br />" +
+		typeof 3.14 + "<br />" +
+		typeof (3.14);
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo5").innerHTML =
+			typeof ""
+			typeof "Joey"
+			typeof "John Doe"
+			typeof 0
+			typeof 314
+			typeof 3.14
+			typeof (3.14);
+
+			//add line breaks
+		</code></pre>
+
+		<hr />
+
+		<h2>Adding Two Numbers and a String</h2>
+
+		<p>Numbers first are added and then string is appended:</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		var x = 5 + 10 + "Whatever";
+		document.getElementById("demo6").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 5 + 10 + "Whatever";
+			document.getElementById("demo6").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Adding a String and Two Numbers</h2>
+
+		<p>Numbers after string are treated as strings:</p>
+
+		<p id="demo7"></p>
+
+		<script>
+		var x = "Whatever" + 5 + 10;
+		document.getElementById("demo7").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = "Whatever" + 5 + 10;
+			document.getElementById("demo7").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Undefined Variable</h2>
+
+		<p>Both the data type and the value of a variable with no value is undefined:</p>
+
+		<p id="demo8"></p>
+
+		<script>
+		var newPerson;
+		document.getElementById("demo8").innerHTML =
+		newPerson + "<br />" + typeof newPerson;
+		</script>
+
+		<pre><code class="language-javascript">
+			var newPerson;
+			document.getElementById("demo8").innerHTML =
+			newPerson + typeof newPerson;
+
+			//add line break
+		</code></pre>
+
+		<hr />
+
+		<h2>An Empty Variable</h2>
+
+		<p id="demo9"></p>
+
+		<script>
+		var car = "";
+		document.getElementById("demo9").innerHTML =
+		"The value is: " + car + "<br />" + "The typeof is: " + typeof car;
+		</script>
+
+		<pre><code class="language-javascript">
+			var car = "";
+			document.getElementById("demo9").innerHTML =
+			"The value is: " + car +  "The typeof is: " + typeof car;
+
+			//add line break
+		</code></pre>
+
+	</body>
+
+</html>

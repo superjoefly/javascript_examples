@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Location Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Location Object</h1>
+
+		<p>The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page. It can be written without the window prefix.</p>
+
+		<h2>Hostname/Port</h2>
+
+		<p>Return the hostname and port of the current URL:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		document.getElementById("demo1").innerHTML =
+		"The hostname is: " + window.location.hostname;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo1").innerHTML =
+			"The hostname is: " + window.location.hostname;
+		</code></pre>
+
+		<hr />
+
+		<h2>URL</h2>
+
+		<p>Return the entire URL of the current page:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		document.getElementById("demo2").innerHTML =
+		"The page hostname is: " + window.location.href;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo2").innerHTML =
+			"The page hostname is: " + window.location.href;
+		</code></pre>
+
+		<hr />
+
+		<h2>Pathname</h2>
+
+		<p>Return the pathname of the current URL:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		document.getElementById("demo3").innerHTML =
+		"The pathname is: " + window.location.pathname;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo3").innerHTML =
+			"The pathname is: " + window.location.pathname;
+		</code></pre>
+
+		<hr />
+
+		<h2>Protocol</h2>
+
+		<p>Return the protocol portion of the current URL:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		document.getElementById("demo4").innerHTML =
+		"The page protocol is " + window.location.protocol;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo4").innerHTML =
+			"The page protocol is " + window.location.protocol;
+		</code></pre>
+
+		<hr />
+
+		<h2>Load Document</h2>
+
+		<p>Load a new document:</p>
+
+		<p><strong>Note:</strong> this will open a new document in this window...click the browser's "back" button to return to this page!</p>
+
+		<input type="button" value="New Document" onclick="newDoc()" />
+
+		<script>
+		function newDoc() {
+			window.location.assign("http://www.bing.com");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function newDoc() {
+				window.location.assign("http://www.bing.com");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Replace Document</h2>
+
+		<p>Replace the current document:</p>
+
+		<p><strong>Note:</strong> this will replace this document. Come back to this page to see more examples!</p>
+
+		<button onclick="replaceDoc()" target="_blank">Replace Document</button>
+
+		<script>
+		function replaceDoc() {
+			window.location.replace("http://www.google.com");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function replaceDoc() {
+				window.location.replace("http://www.google.com");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Break Frame</h2>
+
+		<p>Break out of a frame:</p>
+
+		<p><strong>Note:</strong> this will break out of the current frame...use the browser's back button to return to this page!</p>
+
+		<iframe src="demo_iframe2.html" style="border: 2px solid red;">
+		</iframe>
+
+		<pre><code class="language-javascript">
+			function breakOut() {
+				if (window.top != window.self) {
+					window.top.location = "demo_iframe2.html";
+				}
+			}
+		</code></pre>
+
+	</body>
+
+</html>

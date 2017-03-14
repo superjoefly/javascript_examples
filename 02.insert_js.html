@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Where to Insert JavaScript</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+
+		<!-- External JS Link -->
+		<script src="scripts/script.js"></script>
+
+	  <script>
+		function myFunction() {
+			document.getElementById("demo1").innerHTML = "This paragraph was changed using JavaScript placed in the head section of the document!";
+		}
+		</script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>Where to Insert JavaScript</h1>
+
+		<p>In HTML, JavaScript code must be inserted between script-tags.</p>
+
+		<p>JavaScript can be inserted in many places:</p>
+
+		<h3>Example: in the head section</h3>
+
+		<p id="demo1">Change paragraph text!</p>
+
+		<button type="button" onclick="myFunction()">Click Me!</button>
+
+		<pre><code class="language-javascript">
+			function myFunction() {
+				document.getElementById("demo1").innerHTML = "This paragraph was changed using JavaScript placed in the head section of the document!";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h3>Example: in the body</h3>
+
+		<p id="demo2">Change paragraph text!</p>
+
+		<button type="button" onclick="myFunction2()">Click Me!</button>
+
+		<script>
+		function myFunction2() {
+			document.getElementById("demo2").innerHTML="This paragraph was changed using JavaScript placed in the body section of the document!";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				document.getElementById("demo2").innerHTML="This paragraph was changed using JavaScript placed in the body section of the document!";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h3>Example: external JS file</h3>
+
+		<p id="demo3">Change paragraph text!</p>
+
+		<button type="button" onclick="myFunction3()">Click Me!</button>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+			  document.getElementById("demo3").innerHTML = "This paragraph was changed using JavaScript located in an external JS file!"
+			}
+		</code></pre>
+
+		<hr />
+
+		<h3>Example: external URL</h3>
+
+		<p><strong>To use a js source located at an external url, use script tags with the src = (equal to) the url. It's best to place it in the head section or at the bottom of the body section, right before the closing body-tag.</strong></p>
+
+		<pre><code class="language-javascript">
+			/script src="https://www.w3schools.com/js/myScript.js">/script
+		</code></pre>
+
+		<hr />
+
+		<h3>Example: external folder</h3>
+
+		<p><strong>To use a js file that is located in a folder, include the folder name in the src. It is best to include this link in the head section or at the bottom of the body section, right before the closing body tag.</strong></p>
+
+		<pre><code class="language-javascript">
+			/script src="/js/myscript.js">/script
+		</code></pre>
+
+	</body>
+
+</html>

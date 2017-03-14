@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Base Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+		<base id="example" href="index.html" target="_self" />
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Base Object</h1>
+
+		<h2>Base URL</h2>
+
+		<p>Find the base url for all relative urls on a page</p>
+
+		<button onclick="myFunction1()">Get URL</button>
+
+		<p id="demo1"></p>
+
+		<script>
+		function myFunction1() {
+			var x = document.getElementById("example").href;
+			document.getElementById("demo1").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				var x = document.getElementById("example").href;
+				document.getElementById("demo1").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Base Target</h2>
+
+		<p>Find the base target for all links on a page:</p>
+
+		<button onclick="myFunction2()">Get Target</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function myFunction2() {
+			var x = document.getElementById("example").target;
+			document.getElementById("demo2").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				var x = document.getElementById("example").target;
+				document.getElementById("demo2").innerHTML = x;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

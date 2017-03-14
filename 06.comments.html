@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Comments</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Comments</h1>
+
+		<p>JavaScript comments can be used to explain JavaScript code, and to make it more readable.</p>
+
+		<p>JavaScript comments can also be used to prevent execution, for example, when testing alternative code.</p>
+
+		<hr />
+
+		<h2>Single Line Comments</h2>
+
+		<p>To comment a single line use <b>// comments go here</b>:</p>
+
+		<p>Note: the comments are not executed and will not be shown in the broser window.</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		//document.getElementById("demo1").innerHTML = "not executed!";
+		document.getElementById("demo1").innerHTML = "executed!";
+		</script>
+
+		<pre><code class="language-javascript">
+			//document.getElementById("demo1").innerHTML = "not executed!";
+			document.getElementById("demo1").innerHTML = "executed!";
+		</code></pre>
+
+		<hr />
+
+		<h2>Single Line Comments at End of Line</h2>
+
+		<p>Comments at the end of a line are often used to explain code:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		var x, y;
+		x = 5;
+		y = x * x;
+		document.getElementById("demo2").innerHTML = y; //write y to demo2
+		</script>
+
+		<pre><code class="language-javascript">
+			var x, y;
+			x = 5;
+			y = x * x;
+			document.getElementById("demo2").innerHTML = y; //write y to demo2
+		</code></pre>
+
+		<hr />
+
+		<h2>Multi Line Comments</h2>
+
+		<p>To comment multiple line (long lines etc) use <b>/* comments go here */</b>:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		/*The follwing code will change the paragraph with id="demo3" to include text saying "What going on today?"*/
+
+		document.getElementById("demo3").innerHTML = "What's going on today?";
+		</script>
+
+		<pre><code class="language-javascript">
+			/*The follwing code will change the paragraph with id="demo3" to include text saying "What going on today?"*/
+
+			document.getElementById("demo3").innerHTML = "What's going on today?";
+		</code></pre>
+
+		<hr />
+
+		<h2>Prevent Execution</h2>
+
+		<p>Comments can be used to prevent code execution (comment out).</p>
+
+		<p>The following code will not be executed because it is commented out:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		//document.getElementById("demo4").innerHTML = "This line of code will not be executed!";
+		</script>
+
+		<pre><code class="language-javascript">
+			//document.getElementById("demo4").innerHTML = "This line of code will not be executed!";
+		</code></pre>
+
+	</body>
+
+</html>

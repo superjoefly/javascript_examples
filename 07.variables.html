@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Variables</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Variables</h1>
+
+		<p>JavaScript variables are containers for storing data values.</p>
+
+		<hr />
+
+		<h2>Variables</h2>
+
+		<p>In this example x, y, and z are variables:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		var x = 3;
+		var y = 2;
+		var z = x * y;
+
+		document.getElementById("demo1").innerHTML = z;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 3;
+			var y = 2;
+			var z = x * y;
+
+			document.getElementById("demo1").innerHTML = z;
+		</code></pre>
+
+		<hr />
+
+		<h2>Algebraic Variables</h2>
+
+		<p>Variables can be used to compute values, just like algebra:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		var price1 = 8;
+		var price2 = 9;
+		var total = price1 + price2;
+
+		document.getElementById("demo2").innerHTML = "The total is " + total;
+		</script>
+
+		<pre><code class="language-javascript">
+			var price1 = 8;
+			var price2 = 9;
+			var total = price1 + price2;
+
+			document.getElementById("demo2").innerHTML = "The total is " + total;
+		</code></pre>
+
+		<hr />
+
+		<h2>Strings and Numbers</h2>
+
+		<p>Strings are written with quotes; numbers are written without quotes:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var pi = 3.14;
+		var person = "Joe Atwood";
+		var answer = 'Well, hello there!';
+
+		document.getElementById("demo3").innerHTML = pi;
+		//document.getElementById("demo3").innerHTML = person;
+		//document.getElementById("demo3").innerHTML = answer;
+		</script>
+
+		<pre><code class="language-javascript">
+			var pi = 3.14;
+			var person = "Joe Atwood";
+			var answer = 'Well, hello there!';
+
+			document.getElementById("demo3").innerHTML = pi;
+			//document.getElementById("demo3").innerHTML = person;
+			//document.getElementById("demo3").innerHTML = answer;
+		</code></pre>
+
+		<hr />
+
+		<h2>JavaScript var Keyword</h2>
+
+		<p>The <b>var</b> keyword is used to create variables:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var carName; // declare a variable
+		carName = "Volvo"; // assign variable a value
+
+		document.getElementById("demo4").innerHTML = carName;   //display value of variable
+		</script>
+
+		<pre><code class="language-javascript">
+			var carName; // declare a variable
+			carName = "Volvo"; // assign variable a value
+
+			document.getElementById("demo4").innerHTML = carName;   //display value of variable
+		</code></pre>
+
+		<hr />
+
+		<h2>Multiple Variables</h2>
+
+		<p>Multiple variables can be declared in one statement and are separated by commas:</p>
+
+		<p>Note: when declaring multiple variables in one statement, you only use the <b>var</b> keyword once.</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		var person = "Joey", carName = "BMW", price = 5000;
+
+		document.getElementById("demo5").innerHTML =
+		person + " has a " + carName + " that cost him $" + price;
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = "Joey", carName = "BMW", price = 5000;
+
+			document.getElementById("demo5").innerHTML =
+			person + " has a " + carName + " that cost him $" + price;
+		</code></pre>
+
+		<hr />
+
+		<h2>Multiple Variable</h2>
+
+		<p>Multiple variables can also be declared on multiple lines:</p>
+
+		<p>Note: when declaring multiple variables in one statement, you only use the <b>var</b> keyword once.</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		var person = "Joey",
+		carName = "Audi",
+		price = 5000;
+
+		document.getElementById("demo6").innerHTML =
+		person + " has a " + carName + " that cost him $" + price;
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = "Joey",
+			carName = "Audi",
+			price = 5000;
+
+			document.getElementById("demo6").innerHTML =
+			person + " has a " + carName + " that cost him $" + price;
+		</code></pre>
+
+		<hr />
+
+		<h2>Undefined</h2>
+
+		<p>A variable without a value returns the value undefined:</p>
+
+		<p id="demo7"></p>
+
+		<script>
+		var firstCar;
+		document.getElementById("demo7").innerHTML = firstCar;
+		</script>
+
+		<pre><code class="language-javascript">
+			var firstCar;
+			document.getElementById("demo7").innerHTML = firstCar;
+		</code></pre>
+
+		<hr />
+
+		<h2>Re-declaring Variables</h2>
+
+		<p>Re-declaring a variable will NOT destroy its value:</p>
+
+		<p id="demo8"></p>
+
+		<script>
+		var newCar = "Lexus";
+		var newCar;
+		document.getElementById("demo8").innerHTML = newCar;
+		</script>
+
+		<pre><code class="language-javascript">
+			var newCar = "Lexus";
+			var newCar;
+			document.getElementById("demo8").innerHTML = newCar;
+		</code></pre>
+
+		<hr />
+
+		<h2>Adding Numbers</h2>
+
+		<p>Numbers can be added together and stored in a variable:</p>
+
+		<p id="demo9"></p>
+
+		<script>
+		var x = 5 + 5 + 3;
+		document.getElementById("demo9").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 5 + 5 + 3;
+			document.getElementById("demo9").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Adding Strings</h2>
+
+		<p>Strings can be added together and stored in a variable:</p>
+
+		<p id="demo10"></p>
+
+		<script>
+		var name = "Joey" + " " + "Atwood";
+		document.getElementById("demo10").innerHTML = name;
+		</script>
+
+		<pre><code class="language-javascript">
+			var name = "Joey" + " " + "Atwood";
+			document.getElementById("demo10").innerHTML = name;
+		</code></pre>
+
+		<hr />
+
+		<h2>Concatenation (numbers as strings)</h2>
+
+		<p>Numbers written as strings and added together will be concatentated:</p>
+
+		<p id="demo11"></p>
+
+		<script>
+		var x = "5";
+		var y = "6";
+		document.getElementById("demo11").innerHTML = x + y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = "5";
+			var y = "6";
+			document.getElementById("demo11").innerHTML = x + y;
+		</code></pre>
+
+
+	</body>
+
+</html>

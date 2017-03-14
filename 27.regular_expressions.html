@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Regular Expressions</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>JavaScript Regular Expressions</h1>
+
+		<p>A regular expression is a sequence of characters that forms a search pattern.</p>
+
+		<p>The search pattern can be used for text search and text replace operations.</p>
+
+		<hr />
+
+		<h2>Search for Expression</h2>
+
+		<p>Search for an expression in a string:</p>
+
+		<p id="p1">Search this paragraph for the word bang!</p>
+
+		<button onclick="myFunction1()">Search!</button>
+
+		<p id="demo1"></p>
+
+		<script>
+		function myFunction1() {
+			var str = document.getElementById("p1").innerHTML;
+			var n = str.search(/bang/i);
+
+			document.getElementById("demo1").innerHTML = n;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				var str = document.getElementById("p1").innerHTML;
+				var n = str.search(/bang/i);
+
+				document.getElementById("demo1").innerHTML = n;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Search and Replace</h2>
+
+		<p>Search string for expression and replace it:</p>
+
+		<p id="p2">Search this paragraph and replace the word "bang"! (with bizang)</p>
+
+		<button onclick="myFunction2()">Search!</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function myFunction2() {
+			var str = document.getElementById("p2").innerHTML;
+			var txt = str.replace(/bang/i, "bizang");
+
+			document.getElementById("p2").innerHTML = txt;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				var str = document.getElementById("p2").innerHTML;
+				var txt = str.replace(/bang/i, "bizang");
+
+				document.getElementById("p2").innerHTML = txt;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

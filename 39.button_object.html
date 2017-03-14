@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Button Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Button Object</h1>
+
+		<p>Disable a button:</p>
+
+		<form>
+		<input type="button" id="btn1" value="OK">
+		</form>
+
+		<p>Click the "Disable" button to disable the "OK" button:</p>
+
+		<button onclick="disableButton()">Disable</button>
+
+		<script>
+		function disableButton() {
+		    document.getElementById("btn1").disabled = true;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function disableButton() {
+			    document.getElementById("btn1").disabled = true;
+			}
+		</code></pre>
+
+		<hr />
+
+		<p>Find the name of a button:</p>
+
+		<form action="">
+			<button type="submit" id="btn2" name="btnName" value="Submit">Submit</button>
+		</form>
+
+		<p>Click the "Get Name" button to get the name of the "Submit" button:</p>
+
+		<button onclick="getName()">Get Name</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function getName() {
+			var x = document.getElementById("btn2").name;
+			document.getElementById("demo2").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function getName() {
+				var x = document.getElementById("btn2").name;
+				document.getElementById("demo2").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<p>Find the type of a button:</p>
+
+		<button id="btn3" type="button">Button</button>
+
+		<p>Click the "Get Type" button to return the type of the "Button" button:</p>
+
+		<button onclick="getType()">Get Type</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		function getType() {
+		    var x = document.getElementById("btn3").type;
+		    document.getElementById("demo3").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function getType() {
+			    var x = document.getElementById("btn3").type;
+			    document.getElementById("demo3").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<p>Find the value of a button:</p>
+
+		<form action="">
+			<button id="btn4" name="something" type="submit" value="subject">Submit</button>
+		</form>
+
+		<p>Click the "Get Value" button to get the value of the "Submit" button:</p>
+
+		<button onclick="getValue()">Get Value</button>
+
+		<p id="demo4"></p>
+
+		<script>
+		function getValue() {
+			var x = document.getElementById("btn4").value;
+			document.getElementById("demo4").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function getValue() {
+				var x = document.getElementById("btn4").value;
+				document.getElementById("demo4").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<p>Find the text displayed on a button:</p>
+
+		<button id="btn5" type="submit" name="something" value="something">Button</button>
+
+		<p>Click the "Get Text" button to display the text on the "Button" button:</p>
+
+		<button onclick="getText()">Get Text</button>
+
+		<p id="demo5"></p>
+
+		<script>
+		function getText() {
+			var x = document.getElementById("btn5").innerHTML;
+			document.getElementById("demo5").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function getText() {
+				var x = document.getElementById("btn5").innerHTML;
+				document.getElementById("demo5").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<p>Find the id of the form the button belongs to:</p>
+
+		<form action="" id="form2">
+			<button id="btn6" type="button">Form Button</button>
+		</form>
+
+		<p>Click the "Get Form ID" button to display the id of the form that the button above belongs to:</p>
+
+		<button onclick="getFormId()">Get Form ID</button>
+
+		<p id="demo6"></p>
+
+		<script>
+		function getFormId() {
+			var x = document.getElementById("btn6").form.id;
+			document.getElementById("demo6").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function getFormId() {
+				var x = document.getElementById("btn6").form.id;
+				document.getElementById("demo6").innerHTML = x;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Input Events</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Input Events</h1>
+
+		<p>Using JavaScript to react to events.</p>
+
+		<h2>onBlur (make caps)</h2>
+
+		<p>Capitalize text when a user leaves an input field:</p>
+
+		<form>
+			Enter Your Name: <input type="text" id="fname" onBlur="toCaps()" />
+		</form>
+
+		<script>
+		function toCaps() {
+			var x = document.getElementById("fname");
+			x.value = x.value.toUpperCase();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function toCaps() {
+				var x = document.getElementById("fname");
+				x.value = x.value.toUpperCase();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onChange (make caps)</h2>
+
+		<p>Capitalize text when a user leaves an input field:</p>
+
+		<form>
+			Enter Your Name: <input type="text" id="fname2" onChange="toCaps2()" />
+		</form>
+
+		<script>
+		function toCaps2() {
+			var x = document.getElementById("fname2");
+			x.value = x.value.toUpperCase();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function toCaps2() {
+				var x = document.getElementById("fname2");
+				x.value = x.value.toUpperCase();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onChange (alert)</h2>
+
+		<p>Display alert when an option is selected:</p>
+
+		<form id="form3">
+			Choose a Color:
+			<select id="colors" onChange="colorChosen()">
+				<option value="Blue">Blue</option>
+				<option value="Red">Red</option>
+				<option value="Green">Green</option>
+			</select>
+		</form>
+
+		<script>
+		function colorChosen() {
+			var chosen = document.forms[2].colors.value;
+			alert("You chose the color: " + chosen);
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function colorChosen() {
+				var chosen = document.forms[2].colors.value;
+				alert("You chose the color: " + chosen);
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onFocus (background-color)</h2>
+
+		<p>Change the background color of input field when it gets focus:</p>
+
+		<form id="form4">
+			Enter Your Name: <input id="input4" type="text" onFocus="changeColor()" />
+		</form>
+
+		<script>
+		function changeColor() {
+			document.getElementById("input4").style.background = "lime";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function changeColor() {
+				document.getElementById("input4").style.background = "lime";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onSelect (alert)</h2>
+
+		<p>Display alert when text is selected:</p>
+
+		<form id="form5">
+			Select: <input type="text" id="input5" value="select some of this text!" onSelect="greatJob()" />
+		</form>
+
+		<script>
+		function greatJob() {
+			alert("Great Job!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function greatJob() {
+				alert("Great Job!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onSubmit (alert)</h2>
+
+		<p>Display alert when submit button is clicked:</p>
+
+		<form id="form6" onSubmit="veryGood()">
+			Enter Text: <input type="text" />
+			<input type="submit" />
+		</form>
+
+		<script>
+		function veryGood() {
+			alert("Very Good!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function veryGood() {
+				alert("Very Good!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onReset (alert)</h2>
+
+		<p>Display an alert when the input field is reset:</p>
+
+		<form id="form7" onreset="helloThere()">
+			Enter Name: <input type="text" />
+			<input type="reset" value="reset" />
+		</form>
+
+		<script>
+		function helloThere() {
+			alert("Hello There!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function helloThere() {
+				alert("Hello There!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onKeydown (alert)</h2>
+
+		<p>Display an alert when a user presses a key in the input field:</p>
+
+		<form id="form8">
+			Enter Name: <input type="text" onKeydown="wellDone()" />
+		</form>
+
+		<script>
+		function wellDone() {
+			alert("Well Done!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function wellDone() {
+				alert("Well Done!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onKeypress (change background color)</h2>
+
+		<form id="form9">
+			Enter Name: <input type="text" id="name" onKeypress="changeColor2()"/>
+		</form>
+
+		<script>
+		function changeColor2() {
+			document.getElementById("name").style.background="pink";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function changeColor2() {
+				document.getElementById("name").style.background="pink";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onKeyup (fontSize)</h2>
+
+		<p>Display an alert when the user releases a key while in the input field:</p>
+
+		<form id="form10">
+			Enter Name: <input type="text" onKeyup="changeHeight()" />
+		</form>
+
+		<script>
+		function changeHeight() {
+			document.getElementById("form10").style.fontSize= "30px";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function changeHeight() {
+				document.getElementById("form10").style.fontSize= "30px";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onKeyup (write message)</h2>
+
+		<p>Display the entered text in a separate input field:</p>
+
+		<form id="form11">
+			Enter Message: <input id="myInput" type="text" name="myInput" onKeyup="writeMessage()" />
+			<input id="myMessage" type="text" name="myMessage" />
+		</form>
+
+		<script>
+		function writeMessage() {
+			var x = document.getElementById("myInput").value;
+			document.getElementById("myMessage").value = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function writeMessage() {
+				var x = document.getElementById("myInput").value;
+				document.getElementById("myMessage").value = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onKeydown and onKeyup (background-color)</h2>
+
+		<form id="form12">
+			Enter Text: <input type="text" id="newInput" onKeydown="color('blue')" onKeyup="color('red')"/>
+		</form>
+
+		<script>
+		function color(color) {
+			document.getElementById("newInput").style.background = color;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function color(color) {
+				document.getElementById("newInput").style.background = color;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

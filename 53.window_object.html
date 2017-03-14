@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Window Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Window Object</h1>
+
+		<p>The window object is supported by all browsers; it represents the browser's window.</p>
+
+		<p>All global JavaScript objects, functions, and variables become members of the window object.</p>
+
+		<h2>window.open</h2>
+
+		<p>Open a new window when a button is clicked:</p>
+
+		<button onclick="openWindow()">New Window</button>
+
+		<script>
+		function openWindow() {
+			window.open();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function openWindow() {
+				window.open();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>window.open (with specs)</h2>
+
+		<button onclick="specWindow()">Open Window</button>
+
+		<script>
+		function specWindow() {
+			window.open("https://www.bing.com", "_blank", "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=400, height=400");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function specWindow() {
+				window.open("https://www.bing.com", "_blank", "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=400, height=400");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>window.open (blur/focus)</h2>
+
+		<button onclick="newWindow()">Open Window</button>
+		<button onclick="windowBlur()">Blur</button>
+		<button onclick="windowFocus()">Focus</button>
+
+		<script>
+		var myWindow;
+		function newWindow() {
+			myWindow = window.open("", "", "width=400, height=400");
+			myWindow.blur();
+		}
+
+		function windowBlur() {
+			myWindow.blur();
+		}
+		function windowFocus() {
+			myWindow.focus();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var myWindow;
+			function newWindow() {
+				myWindow = window.open("", "", "width=400, height=400");
+				myWindow.blur();
+			}
+
+			function windowBlur() {
+				myWindow.blur();
+			}
+			function windowFocus() {
+				myWindow.focus();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>window.close</h2>
+
+		<p>Close the new window:</p>
+
+		<button onclick="newWindow2()">Open Window</button>
+		<button onclick="closeWindow()">Close Window</button>
+
+		<script>
+		function newWindow2() {
+			myWindow = window.open("", "", "width=400, height=400");
+		}
+
+		function closeWindow() {
+			myWindow.close();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function newWindow2() {
+				myWindow = window.open("", "", "width=400, height=400");
+			}
+
+			function closeWindow() {
+				myWindow.close();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Is New Window Open?</h2>
+
+		<p>Check if new window is open or not:</p>
+
+		<p id="demo3"></p>
+
+		<button onclick="openWindow3()">Open Window</button>
+		<button onclick="closeWindow3()">Close Window</button>
+		<button onclick="checkWindow3()">Is Window Open?</button>
+
+		<script>
+		var myWindow;
+		function openWindow3() {
+			myWindow = window.open("", "", "width=400, height=400");
+		}
+
+		function closeWindow3() {
+			if (myWindow) {
+				myWindow.close();
+			}
+		}
+
+		function checkWindow3() {
+			var msg = "";
+			if (!myWindow) {
+				msg = "Window never opened";
+			} else {
+				if (myWindow.closed) {
+					msg = "Window closed";
+				} else {
+					msg = "Window opened";
+				}
+			}
+			document.getElementById("demo3").innerHTML = msg;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var myWindow;
+			function openWindow3() {
+				myWindow = window.open("", "", "width=400, height=400");
+			}
+
+			function closeWindow3() {
+				if (myWindow) {
+					myWindow.close();
+				}
+			}
+
+			function checkWindow3() {
+				var msg = "";
+				if (!myWindow) {
+					msg = "Window never opened";
+				} else {
+					if (myWindow.closed) {
+						msg = "Window closed";
+					} else {
+						msg = "Window opened";
+					}
+				}
+				document.getElementById("demo3").innerHTML = msg;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>window.open (write to parent window)</h2>
+
+		<p id="demo4"></p>
+
+		<button onclick="openWindow4()">Open Window</button>
+
+		<script>
+		function openWindow4() {
+			var myWindow = window.open("", "", "width=400, height=400");
+
+			myWindow.opener.document.getElementById("demo4").innerHTML =
+			"A new window was opened!";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function openWindow4() {
+				var myWindow = window.open("", "", "width=400, height=400");
+
+				myWindow.opener.document.getElementById("demo4").innerHTML =
+				"A new window was opened!";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>.moveBy</h2>
+
+		<p>Move the new window relative to its current position:</p>
+
+		<button onclick="openWindow5()">Open Window</button>
+		<button onclick="moveWindow5()">Move Window</button>
+
+		<script>
+		var myWindow;
+		function openWindow5() {
+			myWindow = window.open("", "", "width=400, height=400");
+		}
+		function moveWindow5() {
+			myWindow.moveBy(300, 300);
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var myWindow;
+			function openWindow5() {
+				myWindow = window.open("", "", "width=400, height=400");
+			}
+			function moveWindow5() {
+				myWindow.moveBy(300, 300);
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>.moveTo</h2>
+
+		<p>Move the new window to a specified position:</p>
+
+		<button onclick="openWindow6()">Open Window</button>
+		<button onclick="moveWindow6()">Move Window</button>
+
+		<script>
+		var myWindow;
+		function openWindow6() {
+			myWindow = window.open("", "", "width=400, height=400");
+		}
+		function moveWindow6() {
+			myWindow.moveTo(300, 0);
+			myWindow.focus();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var myWindow;
+			function openWindow6() {
+				myWindow = window.open("", "", "width=400, height=400");
+			}
+			function moveWindow6() {
+				myWindow.moveTo(300, 0);
+				myWindow.focus();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>window.print</h2>
+
+		<p>Print the current page:</p>
+
+		<button onclick="printPage()">Print Page</button>
+
+		<script>
+		function printPage() {
+			window.print();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function printPage() {
+				window.print();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>.resize</h2>
+
+		<p>Resize a new page by a specified number of pixels:</p>
+
+		<button onclick="openWindow7()">Open Window</button>
+		<button onclick="resizeWindow7()">Resize Window</button>
+
+		<script>
+		var w;
+		function openWindow7() {
+			w = window.open("", "", "width=400, height=400");
+			w.focus();
+		}
+		function resizeWindow7() {
+			w.resizeBy(50, 50);
+			w.focus();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var w;
+			function openWindow7() {
+				w = window.open("", "", "width=400, height=400");
+				w.focus();
+			}
+			function resizeWindow7() {
+				w.resizeBy(50, 50);
+				w.focus();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>.resizeTo</h2>
+
+		<p>Resize a new window to a specified size:</p>
+
+		<button onclick="openWindow8()">Open Window</button>
+		<button onclick="resizeWindow8()">Resize Window</button>
+
+		<script>
+		var w;
+		function openWindow8() {
+			w = window.open("", "", "width=400, height=400");
+			w.focus();
+		}
+		function resizeWindow8() {
+			w.resizeTo(500, 500);
+			w.focus();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var w;
+			function openWindow8() {
+				w = window.open("", "", "width=400, height=400");
+				w.focus();
+			}
+			function resizeWindow8() {
+				w.resizeTo(500, 500);
+				w.focus();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>.scrollBy</h2>
+
+		<p>Scroll the document by a specified number of pixels:</p>
+
+		<button onclick="scrollWindow()">Scroll</button>
+
+		<script>
+		function scrollWindow() {
+			window.scrollBy(0, 100);
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function scrollWindow() {
+				window.scrollBy(0, 100);
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>.scrollTo</h2>
+
+		<p>Scroll the document to a specified position:</p>
+
+		<button onclick="scrollWindow2()">Scroll</button>
+
+		<script>
+		function scrollWindow2() {
+			window.scrollTo(0, 100);
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function scrollWindow2() {
+				window.scrollTo(0, 100);
+			}
+		</code></pre>
+
+	</body>
+
+</html>

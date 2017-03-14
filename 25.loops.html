@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Loops</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Loops</h1>
+
+		<p>Loops can execute a block of code a number of times.</p>
+
+		<hr />
+
+		<h2>For Loop</h2>
+
+		<p>Click the button to loop through the block of code 5 times:</p>
+
+		<button onclick="myFunction1()">Click Me!</button>
+
+		<p id="demo1"></p>
+
+		<script>
+		function myFunction1() {
+			var x = "", i;
+			for (i = 0; i < 5; i++) {
+				x = x + "The number is " + i + "<br />";
+			}
+			document.getElementById("demo1").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				var x = "", i;
+				for (i = 0; i < 5; i++) {
+					x = x + "The number is " + i + "<br />";
+				}
+				document.getElementById("demo1").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Loop Through Headers</h2>
+
+		<p>Click button to loop through code and output 6 headers:</p>
+
+		<button onclick="myFunction2()">Click Me!</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function myFunction2() {
+			var x = "", i;
+			for (i = 1; i < 7; i++) {
+				x = x + "<h" + i + ">Heading " + i +
+				"</h1" + i + ">";
+			}
+			document.getElementById("demo2").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				var x = "", i;
+				for (i = 1; i < 7; i++) {
+					x = x + "<h" + i + ">Heading " + i +
+					"</h1" + i + ">";
+				}
+				document.getElementById("demo2").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>While Loop</h2>
+
+		<p>Loop through code while i is less than 10:</p>
+
+		<button onclick="myFunction3()">Click Me!</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		function myFunction3() {
+			var text = "";
+			var i = 0;
+			while (i < 10) {
+				text += "<br /> The number is " + i;
+				i++;
+			}
+			document.getElementById("demo3").innerHTML = text;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				var text = "";
+				var i = 0;
+				while (i < 10) {
+					text += "<br /> The number is " + i;
+					i++;
+				}
+				document.getElementById("demo3").innerHTML = text;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Do While Loop</h2>
+
+		<p>Execute code (do) as long as a certain condition is true (while):</p>
+
+		<button onclick="myFunction4()">Click Me!</button>
+
+		<p id="demo4"></p>
+
+		<script>
+		function myFunction4() {
+			var text = "",
+			i = 0;
+
+			do {
+				text += "<br />The number is " + i;
+				i++;
+			}
+			while (i < 10);
+			document.getElementById("demo4").innerHTML = text;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction4() {
+				var text = "",
+				i = 0;
+
+				do {
+					text += "<br />The number is " + i;
+					i++;
+				}
+				while (i < 10);
+				document.getElementById("demo4").innerHTML = text;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Break a Loop</h2>
+
+		<p>Stop the function's execution with a <b>break</b> in the loop:</p>
+
+		<button onclick="myFunction5()">Click Me!</button>
+
+		<p id="demo5"></p>
+
+		<script>
+		function myFunction5() {
+			var text = "", i;
+			for (i = 0; i < 10; i++) {
+				if (i === 3) { break; }
+				text += "The number is " + i + "<br />";
+			}
+			document.getElementById("demo5").innerHTML = text;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction5() {
+				var text = "", i;
+				for (i = 0; i < 10; i++) {
+					if (i === 3) { break; }
+					text += "The number is " + i + "<br />";
+				}
+				document.getElementById("demo5").innerHTML = text;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Continue</h2>
+
+		<p>Break the loop (breaks at 3) and then continue execution of loop:</p>
+
+		<button onclick="myFunction6()">Click Me!</button>
+
+		<p id="demo6"></p>
+
+		<script>
+		function myFunction6() {
+			var text, i;
+			for (i = 0; i < 10; i++) {
+				if (i === 3) {continue;}
+				text += "The number is " + i + "<br />";
+			}
+			document.getElementById("demo6").innerHTML = text;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction6() {
+				var text, i;
+				for (i = 0; i < 10; i++) {
+					if (i === 3) {continue;}
+					text += "The number is " + i + "<br />";
+				}
+				document.getElementById("demo6").innerHTML = text;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>for in</h2>
+
+		<p>Use the for...in statement to loop through the properties of an object:</p>
+
+		<button onclick="myFunction7()">Click Me!</button>
+
+		<p id="demo7"></p>
+
+		<script>
+		function myFunction7() {
+			var txt = "", x;
+			var person = {
+				fname: "John",
+				lname: "Doe",
+				age: 49
+			};
+			for (x in person) {
+				txt += person[x] + " ";
+			}
+			document.getElementById("demo7").innerHTML = txt;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction7() {
+				var txt = "", x;
+				var person = {
+					fname: "John",
+					lname: "Doe",
+					age: 49
+				};
+				for (x in person) {
+					txt += person[x] + " ";
+				}
+				document.getElementById("demo7").innerHTML = txt;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

@@ -1,0 +1,50 @@
+body {
+  font-size: 100%;
+  background-color: azure;
+}
+
+h1 {
+  color: #272644;
+}
+
+@media screen and (min-width: 800px) {
+p, pre code {
+  font-size: 1.2em;
+}
+}
+
+p[id^="demo"]::before {
+  content: "Result: ";
+  color: red;
+}
+
+.container {
+  display: flex;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  flex: 1 1 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+ul li a:visited {
+  color: #2b492d;
+}
+
+ul li a:hover {
+  color: #2b492d;
+}
+
+.subj {
+  font-size: 24px;
+  color: #272644;
+}

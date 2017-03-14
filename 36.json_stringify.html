@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JSON Stringify</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>JSON Stringify</h1>
+
+		<p>A common use of JSON is to exchange data to/from a webserver.</p>
+
+		<p>When sending data to a webserver, the data has to be a string.</p>
+
+		<p>You can convert a JavaScript object into a string with <b>JSON.stringify()</b>.</p>
+
+		<hr />
+
+		<h2>Stringify Object</h2>
+
+		<p>Create a JSON string from a JavaScript object:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		var obj = {
+			"name":"Jeremy",
+			"age": 22,
+			"city": "New Jersey"
+		};
+		var myJSON = JSON.stringify(obj);
+		document.getElementById("demo1").innerHTML = myJSON;
+		</script>
+
+		<pre><code class="language-javascript">
+			var obj = {
+				"name":"Jeremy",
+				"age": 22,
+				"city": "New Jersey"
+			};
+			var myJSON = JSON.stringify(obj);
+			document.getElementById("demo1").innerHTML = myJSON;
+		</code></pre>
+
+		<hr />
+
+		<h2>Stringify Array</h2>
+
+		<p>Create JSON string from a JavaScript array:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		var arr = [
+			"Jeremy", "Billybob", "Sallydoo", "Joeblow"
+		];
+		var myJSON = JSON.stringify(arr);
+		document.getElementById("demo2").innerHTML = myJSON;
+		</script>
+
+		<pre><code class="language-javascript">
+			var arr = [
+				"Jeremy", "Billybob", "Sallydoo", "Joeblow"
+			];
+			var myJSON = JSON.stringify(arr);
+			document.getElementById("demo2").innerHTML = myJSON;
+		</code></pre>
+
+		<hr />
+
+		<h2>Stringify Dates</h2>
+
+		<p>Convert any date object into a JSON string:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var obj = {
+			"name":"Frank",
+			"age": 44,
+			"today": new Date(),
+			"city": "New York"
+		};
+		var myJSON = JSON.stringify(obj);
+		document.getElementById("demo3").innerHTML = myJSON;
+		</script>
+
+		<pre><code class="language-javascript">
+			var obj = {
+				"name":"Frank",
+				"age": 44,
+				"today": new Date(),
+				"city": "New York"
+			};
+			var myJSON = JSON.stringify(obj);
+			document.getElementById("demo3").innerHTML = myJSON;
+		</code></pre>
+
+		<hr />
+
+		<h2>Stringify Functions</h2>
+
+		<p>JSON.stringify will remove functions from an object:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var obj = {
+			"name": "Jill",
+			"age": function() {return 45;},
+			"city": "Chicago"
+		};
+		var myJSON = JSON.stringify(obj);
+		document.getElementById("demo4").innerHTML = myJSON;
+		</script>
+
+		<pre><code class="language-javascript">
+			var obj = {
+				"name": "Jill",
+				"age": function() {return 45;},
+				"city": "Chicago"
+			};
+			var myJSON = JSON.stringify(obj);
+			document.getElementById("demo4").innerHTML = myJSON;
+		</code></pre>
+
+		<hr />
+
+		<h2>Stringify Functions (toString)</h2>
+
+		<p>To keep the function in the JSON object, first convert it to a string using the toString() method:</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		var obj = {
+			"name": "Harry",
+			"age":function() {return 54;},
+			"city":"Montgomery"
+		};
+		obj.age = obj.age.toString();
+		var myJSON = JSON.stringify(obj);
+		document.getElementById("demo5").innerHTML = myJSON;
+		</script>
+
+		<pre><code class="language-javascript">
+			var obj = {
+				"name": "Harry",
+				"age":function() {return 54;},
+				"city":"Montgomery"
+			};
+			obj.age = obj.age.toString();
+			var myJSON = JSON.stringify(obj);
+			document.getElementById("demo5").innerHTML = myJSON;
+		</code></pre>
+
+	</body>
+
+</html>

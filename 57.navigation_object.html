@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Navigation Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Navigation Object</h1>
+
+		<p>The window.navigator object contains information about the visitor's browser. It can be written without the window prefix.</p>
+
+		<h2>Cookies</h2>
+
+		<p>Check if cookies are enabled:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+			document.getElementById("demo1").innerHTML =
+			navigator.cookieEnabled;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo1").innerHTML =
+			navigator.cookieEnabled;
+		</code></pre>
+
+		<hr />
+
+		<h2>Browser Name</h2>
+
+		<p>Get the name of the visitor's browser:</p>
+
+		<p>"Mozilla" is the application code name for Chrome, Firefox, IE, Safari, and Opera.</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		document.getElementById("demo2").innerHTML = navigator.appCodeName;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo2").innerHTML = navigator.appCodeName;
+		</code></pre>
+
+		<hr />
+
+		<h2>Product Name</h2>
+
+		<p>Get the product name of the visitor's browser:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		document.getElementById("demo3").innerHTML = navigator.product;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo3").innerHTML = navigator.product;
+		</code></pre>
+
+		<hr />
+
+		<h2>Version</h2>
+
+		<p>Get the version information of the visitor's browser:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		document.getElementById("demo4").innerHTML = navigator.appVersion;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo4").innerHTML = navigator.appVersion;
+		</code></pre>
+
+		<hr />
+
+		<h2>User Agent</h2>
+
+		<p>Get the user agent information for a visitor's browser:</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		document.getElementById("demo5").innerHTML = navigator.userAgent;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo5").innerHTML = navigator.userAgent;
+		</code></pre>
+
+		<hr />
+
+		<h2>Platform</h2>
+
+		<p>Get the platform of the visitor's operating system:</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		document.getElementById("demo6").innerHTML = navigator.platform;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo6").innerHTML = navigator.platform;
+		</code></pre>
+
+		<hr />
+
+		<h2>Language</h2>
+
+		<p>Get the language of the visitor's browser:</p>
+
+		<p id="demo7"></p>
+
+		<script>
+		document.getElementById("demo7").innerHTML = navigator.language;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo7").innerHTML = navigator.language;
+		</code></pre>
+
+		<hr />
+
+		<h2>Java</h2>
+
+		<p>Check to see if Java is enabled:</p>
+
+		<p id="demo8"></p>
+
+		<script>
+		document.getElementById("demo8").innerHTML = navigator.javaEnabled();
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo8").innerHTML = navigator.javaEnabled();
+		</code></pre>
+
+	</body>
+
+</html>

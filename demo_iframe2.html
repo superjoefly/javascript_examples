@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title></title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Demo Iframe</h1>
+
+		<input type="button" onclick="breakOut()" value="Break Out" />
+
+		<script>
+		function breakOut() {
+			if (window.top != window.self) {
+				window.top.location = "demo_iframe2.html";
+			}
+		}
+		</script>
+
+
+
+
+
+	</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JSON Arrays</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>JSON Arrays</h1>
+
+		<p>Arrays in JSON are almost the same as arrays in JavaScript, however, in JSON, arrays must be of type string, number, object, boolean or null.</p>
+
+		<hr />
+
+		<h2>Array Values</h2>
+
+		<p>Access JSON array values:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		var myObj, x;
+		myObj = {
+			"name": "Sally",
+			"age": 33,
+			"cars": ["VW", "Ford", "BMW"]
+		};
+		x = myObj.cars[0];
+		document.getElementById("demo1").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var myObj, x;
+			myObj = {
+				"name": "Sally",
+				"age": 33,
+				"cars": ["VW", "Ford", "BMW"]
+			};
+			x = myObj.cars[0];
+			document.getElementById("demo1").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Looping with for...in</h2>
+
+		<p>Loop through JSON array using for...in:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		var myObj, i, x = "";
+		myObj = {
+			"name":"Joe",
+			"age": 37,
+			"cars": [
+				"Audi", "Fiat", "Cadillac"
+			]
+		};
+		for (i in myObj.cars) {
+			x += myObj.cars[i] + " ";
+		}
+		document.getElementById("demo2").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var myObj, i, x = "";
+			myObj = {
+				"name":"Joe",
+				"age": 37,
+				"cars": [
+					"Audi", "Fiat", "Cadillac"
+				]
+			};
+			for (i in myObj.cars) {
+				x += myObj.cars[i] + " ";
+			}
+			document.getElementById("demo2").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Looping using for</h2>
+
+		<p>Loop through a JSON array using for:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var myObj, i, x = "";
+		myObj = {
+			"name": "Bob",
+			"age": 45,
+			"cars": [
+				"Fiat", "Ford", "Subaru"
+			]
+		};
+
+		for (i = 0; i < myObj.cars.length; i++) {
+			x += myObj.cars[i] + " ";
+		}
+
+		document.getElementById("demo3").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var myObj, i, x = "";
+			myObj = {
+				"name": "Bob",
+				"age": 45,
+				"cars": [
+					"Fiat", "Ford", "Subaru"
+				]
+			};
+
+			for (i = 0; i < myObj.cars.length; i++) {
+				x += myObj.cars[i] + " ";
+			}
+
+			document.getElementById("demo3").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Access Nested Arrays</h2>
+
+		<p>Loop through an array inside of an array:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var myObj, i, j, x = "";
+
+		myObj = {
+			"name": "Joe",
+			"age": "37",
+			"cars": [
+				{
+					"name":"Toyota", "models": ["Tacoma", "Carolla", "Camry"]
+				},
+				{
+					"name":"Ford", "models": ["Focus", "Taurus", "Mustang"]
+				},
+				{
+					"name":"Fiat", "models": ["Panda", "500"]
+				}
+			]
+		}
+
+		for (i in myObj.cars) {
+			x += "<h3>" + myObj.cars[i].name + "</h3>";
+			for (j in myObj.cars[i].models) {
+				x += myObj.cars[i].models[j] + " ";
+			}
+		}
+
+		document.getElementById("demo4").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var myObj, i, j, x = "";
+
+			myObj = {
+				"name": "Joe",
+				"age": "37",
+				"cars": [
+					{
+						"name":"Toyota", "models": ["Tacoma", "Carolla", "Camry"]
+					},
+					{
+						"name":"Ford", "models": ["Focus", "Taurus", "Mustang"]
+					},
+					{
+						"name":"Fiat", "models": ["Panda", "500"]
+					}
+				]
+			}
+
+			for (i in myObj.cars) {
+				x += "<h3>" + myObj.cars[i].name + "</h3>";
+				for (j in myObj.cars[i].models) {
+					x += myObj.cars[i].models[j] + " ";
+				}
+			}
+
+			document.getElementById("demo4").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Modify Array Values</h2>
+
+		<p>Modify an array value of a JSON object:</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		var myObj, i, x = "";
+		myObj = {
+			"name":"Jessy",
+			"age": 29,
+			"cars": [
+				"Toyota", "BMW", "Audi"
+			]
+		};
+		myObj.cars[1] = "Ford";
+
+		for (i in myObj.cars) {
+			x += myObj.cars[i] + " ";
+		}
+
+		document.getElementById("demo5").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var myObj, i, x = "";
+			myObj = {
+				"name":"Jessy",
+				"age": 29,
+				"cars": [
+					"Toyota", "BMW", "Audi"
+				]
+			};
+			myObj.cars[1] = "Ford";
+
+			for (i in myObj.cars) {
+				x += myObj.cars[i] + " ";
+			}
+
+			document.getElementById("demo5").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Delete Array Items</h2>
+
+		<p id="demo6"></p>
+
+		<script>
+		var myObj, i, x = "";
+		myObj = {
+			"name":"Hank",
+			"age":47,
+			"cars": [
+				"Ford", "Buick", "Fiat", "Toyota"
+			]
+		};
+		delete myObj.cars[1];
+
+		for (i in myObj.cars) {
+			x += myObj.cars[i] + " ";
+		}
+
+		document.getElementById("demo6").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var myObj, i, x = "";
+			myObj = {
+				"name":"Hank",
+				"age":47,
+				"cars": [
+					"Ford", "Buick", "Fiat", "Toyota"
+				]
+			};
+			delete myObj.cars[1];
+
+			for (i in myObj.cars) {
+				x += myObj.cars[i] + " ";
+			}
+
+			document.getElementById("demo6").innerHTML = x;
+		</code></pre>
+
+	</body>
+
+</html>

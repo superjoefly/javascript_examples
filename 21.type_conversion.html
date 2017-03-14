@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Type Conversion</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Type Conversion</h1>
+
+		<p>Number() converts to a number, String() converts to a string, and Boolean() converts to a boolean.</p>
+
+		<hr />
+
+		<h2>Display Typeof</h2>
+
+		<p>Display the type of variables:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		document.getElementById("demo1").innerHTML =
+		typeof "john" + "<br />" +
+		typeof 3.14 + "<br />" +
+		typeof NaN + "<br />" +
+		typeof false + "<br />" +
+		typeof [1,2,3,4] + "<br />" +
+		typeof {name: "John", age: 34} + "<br />" +
+		typeof new Date() + "<br />" +
+		typeof function () {} + "<br />" +
+		typeof myCar + "<br />" +
+		typeof null;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo1").innerHTML =
+			typeof "john" +
+			typeof 3.14 +
+			typeof NaN +
+			typeof false +
+			typeof [1,2,3,4] +
+			typeof {name: "John", age: 34} +
+			typeof new Date() +
+			typeof function () {} +
+			typeof myCar +
+			typeof null;
+
+			//add line breaks!
+		</code></pre>
+
+		<hr />
+
+		<h2>Display Constructor</h2>
+
+		<p>Display the constructor of variables:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		document.getElementById("demo2").innerHTML =
+		"john".constructor + "<br />" +
+		(3.14).constructor + "<br />" +
+		false.constructor + "<br />" +
+		[1,2,3,4].constructor + "<br />" +
+		{name: 'John', age: 49}.constructor + "<br />" +
+		new Date().constructor + "<br />" +
+		function() {}.constructor;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo2").innerHTML =
+			"john".constructor +
+			(3.14).constructor +
+			false.constructor +
+			[1,2,3,4].constructor +
+			{name: 'John', age: 49}.constructor +
+			new Date().constructor +
+			function() {}.constructor;
+
+			//add line breaks!
+		</code></pre>
+
+		<hr />
+
+		<h2>Convert Number to String (toString)</h2>
+
+		<p>Convert a number to a string using toString():</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var x = 234;
+		document.getElementById("demo3").innerHTML = x.toString();
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 234;
+			document.getElementById("demo3").innerHTML = x.toString();
+		</code></pre>
+
+		<hr />
+
+		<h2>Convert Number to String (String)</h2>
+
+		<p>Convert a number to a string using String():</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var x = 345;
+		document.getElementById("demo4").innerHTML = String(x);
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 345;
+			document.getElementById("demo4").innerHTML = String(x);
+		</code></pre>
+
+		<hr />
+
+		<h2>Determine if is Array</h2>
+
+		<p>Determine if a variable is an array using isArray():</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		var colors = ["Red", "Green", "Blue", "Orange"];
+		document.getElementById("demo5").innerHTML =
+		isArray(colors);
+
+		function isArray(myArray) {
+			return myArray.constructor.toString().indexOf("Array") > -1;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var colors = ["Red", "Green", "Blue", "Orange"];
+			document.getElementById("demo5").innerHTML =
+			isArray(colors);
+
+			function isArray(myArray) {
+				return myArray.constructor.toString().indexOf("Array") > -1;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Determine if is a Date</h2>
+
+		<p>Determine if a variable is a date using isDate():</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		var myDate = new Date();
+		document.getElementById("demo6").innerHTML = isDate(myDate);
+
+		function isDate(myDate) {
+			return myDate.constructor.toString().indexOf("Date") > -1;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var myDate = new Date();
+			document.getElementById("demo6").innerHTML = isDate(myDate);
+
+			function isDate(myDate) {
+				return myDate.constructor.toString().indexOf("Date") > -1;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

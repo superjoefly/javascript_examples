@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Arrays</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Arrays</h1>
+
+		<p>JavaScript arrays are used to store multiple values in a single variable.</p>
+
+		<hr />
+
+		<h2>Arrays</h2>
+
+		<p>Create an array of names:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		var names = [
+			"Bill",
+			"Jack",
+			"David"
+		];
+
+		document.getElementById("demo1").innerHTML = names;
+		</script>
+
+		<pre><code class="language-javascript">
+			var names = [
+				"Bill",
+				"Jack",
+				"David"
+			];
+
+			document.getElementById("demo1").innerHTML = names;
+		</code></pre>
+
+		<hr />
+
+		<h2>concat()</h2>
+
+		<p>Join two arrays using concat():</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		var girls = ["Jane", "Jill", "Jessica"];
+		var boys = ["Jack", "David", "Brian"];
+		var friends = girls.concat(boys);
+
+		document.getElementById("demo2").innerHTML = friends;
+		</script>
+
+		<pre><code class="language-javascript">
+			var girls = ["Jane", "Jill", "Jessica"];
+			var boys = ["Jack", "David", "Brian"];
+			var friends = girls.concat(boys);
+
+			document.getElementById("demo2").innerHTML = friends;
+		</code></pre>
+
+		<hr />
+
+		<h2>concat() - more than two</h2>
+
+		<p>Join more than two arrays:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var arr1 = ["Jack", "John", "Jerry"];
+		var arr2 = ["Ben", "Bill", "Bob"];
+		var arr3 = ["Jessical", "Jill", "Jane"];
+
+		var friends = arr1.concat(arr2, arr3);
+
+		document.getElementById("demo3").innerHTML = friends;
+		</script>
+
+		<pre><code class="language-javascript">
+			var arr1 = ["Jack", "John", "Jerry"];
+			var arr2 = ["Ben", "Bill", "Bob"];
+			var arr3 = ["Jessical", "Jill", "Jane"];
+
+			var friends = arr1.concat(arr2, arr3);
+
+			document.getElementById("demo3").innerHTML = friends;
+		</code></pre>
+
+		<hr />
+
+		<h2>join()</h2>
+
+		<p>Join array elements into a string using join():</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+		document.getElementById("demo4").innerHTML =
+		colors.join(" * ");
+		</script>
+
+		<pre><code class="language-javascript">
+			var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+			document.getElementById("demo4").innerHTML =
+			colors.join(" * ");
+		</code></pre>
+
+		<hr />
+
+		<h2>pop()</h2>
+
+		<p>Remove the last element of an array using pop():</p>
+
+		<p id="demo5"></p>
+
+		<button onclick="myFunction()">POP!</button>
+
+		<script>
+		var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+		document.getElementById("demo5").innerHTML = colors;
+
+		function myFunction() {
+			colors.pop();
+
+		document.getElementById("demo5").innerHTML = colors;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+			document.getElementById("demo5").innerHTML = colors;
+
+			function myFunction() {
+				colors.pop();
+
+			document.getElementById("demo5").innerHTML = colors;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>push()</h2>
+
+		<p>Add new elements to an array using push():</p>
+
+		<p id="demo6"></p>
+
+		<button onclick="myFunction2()">PUSH!</button>
+
+		<script>
+		var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+		document.getElementById("demo6").innerHTML = colors;
+
+		function myFunction2() {
+			colors.push("brown, pink");
+
+		document.getElementById("demo6").innerHTML = colors;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+			document.getElementById("demo6").innerHTML = colors;
+
+			function myFunction2() {
+				colors.push("brown, pink");
+
+			document.getElementById("demo6").innerHTML = colors;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>.sort() and .reverse()</h2>
+
+		<p>Sort (alphabetically) and reverse the order of elements in an array:</p>
+
+		<p id="demo7"></p>
+
+		<button onclick="myFunction3()">Try It!</button>
+
+		<script>
+		var cars = ["Honda", "Toyota", "Audi", "Buick"];
+
+		document.getElementById("demo7").innerHTML = cars;
+
+		function myFunction3() {
+			cars.sort();
+			cars.reverse();
+
+		document.getElementById("demo7").innerHTML = cars;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var cars = ["Honda", "Toyota", "Audi", "Buick"];
+
+			document.getElementById("demo7").innerHTML = cars;
+
+			function myFunction3() {
+				cars.sort();
+				cars.reverse();
+
+			document.getElementById("demo7").innerHTML = cars;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>shift()</h2>
+
+		<p>Remove the first element of an array using shift():</p>
+
+		<p id="demo8"></p>
+
+		<button onclick="myFunction4()">SHIFT!</button>
+
+		<script>
+		var cars = ["Honda", "Toyota", "Audi", "Buick"];
+
+		document.getElementById("demo8").innerHTML = cars;
+
+		function myFunction4() {
+			cars.shift();
+
+		document.getElementById("demo8").innerHTML = cars;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var cars = ["Honda", "Toyota", "Audi", "Buick"];
+
+			document.getElementById("demo8").innerHTML = cars;
+
+			function myFunction4() {
+				cars.shift();
+
+			document.getElementById("demo8").innerHTML = cars;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>slice()</h2>
+
+		<p>When the slice method is given two arguments, it selects array elements from the start argument up to (but not including) the end argument.</p>
+
+		<p>Select elements from an array using slice():</p>
+
+		<p id="demo9"></p>
+
+		<button onclick="myFunction5()">SLICE!</button>
+
+		<script>
+		var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+		document.getElementById("demo9").innerHTML = colors;
+
+		function myFunction5() {
+		var favoriteColors = colors.slice(1,3);
+
+		document.getElementById("demo9").innerHTML =
+		favoriteColors;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+			document.getElementById("demo9").innerHTML = colors;
+
+			function myFunction5() {
+			var favoriteColors = colors.slice(1,3);
+
+			document.getElementById("demo9").innerHTML =
+			favoriteColors;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>sort() - alphabetical and ascending</h2>
+
+		<p>Sort the elements in an array alphabetically and in ascending order using sort():</p>
+
+		<p id="demo10"></p>
+
+		<button onclick="myFunction6()">SORT!</button>
+
+		<script>
+		var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+		document.getElementById("demo10").innerHTML = colors;
+
+		function myFunction6() {
+			document.getElementById("demo10").innerHTML = colors.sort();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+			document.getElementById("demo10").innerHTML = colors;
+
+			function myFunction6() {
+				document.getElementById("demo10").innerHTML = colors.sort();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>sort() - numbers ascending</h2>
+
+		<p>Sort an array of numbers in ascending order using sort():</p>
+
+		<p id="demo11"></p>
+
+		<button onclick="myFunction7()">SORT!</button>
+
+		<script>
+		var num = [10, 300, 25, 33, 87];
+
+		document.getElementById("demo11").innerHTML = num;
+
+		function myFunction7() {
+			num.sort(function(a, b) {
+				return a - b
+			});
+			document.getElementById("demo11").innerHTML = num;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var num = [10, 300, 25, 33, 87];
+
+			document.getElementById("demo11").innerHTML = num;
+
+			function myFunction7() {
+				num.sort(function(a, b) {
+					return a - b
+				});
+				document.getElementById("demo11").innerHTML = num;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>sort() - numbers descending</h2>
+
+		<p>Sort an array of numbers in descending order using sort():</p>
+
+		<p id="demo12"></p>
+
+		<button onclick="myFunction8()">SORT!</button>
+
+		<script>
+		var num = [10, 300, 25, 33, 87];
+		document.getElementById("demo12").innerHTML = num;
+
+		function myFunction8() {
+			num.sort(function(a, b) {
+				return b - a
+			});
+
+			document.getElementById("demo12").innerHTML = num;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var num = [10, 300, 25, 33, 87];
+			document.getElementById("demo12").innerHTML = num;
+
+			function myFunction8() {
+				num.sort(function(a, b) {
+					return b - a
+				});
+
+				document.getElementById("demo12").innerHTML = num;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>sort() - numbers alphabetically</h2>
+
+		<p>Sort numbers alphabetically using sort():</p>
+
+		<p id="demo13"></p>
+
+		<button onclick="myFunction9()">SORT!</button>
+
+		<script>
+		var num = [10, 300, 25, 33, 87];
+		document.getElementById("demo13").innerHTML = num;
+
+		function myFunction9() {
+			document.getElementById("demo13").innerHTML = num.sort();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var num = [10, 300, 25, 33, 87];
+			document.getElementById("demo13").innerHTML = num;
+
+			function myFunction9() {
+				document.getElementById("demo13").innerHTML = num.sort();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>sort() - numbers random</h2>
+
+		<p>Sort numbers in a random order using sort():</p>
+
+		<p id="demo14"></p>
+
+		<button onclick="myFunction10()">SORT!</button>
+
+		<script>
+		var num = [1, 2, 3, 4, 5, 6, 7];
+		document.getElementById("demo14").innerHTML = num;
+
+		function myFunction10() {
+			document.getElementById("demo14").innerHTML = num.sort(function(a, b) {
+				return 0.5 - Math.random()
+			});
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var num = [1, 2, 3, 4, 5, 6, 7];
+			document.getElementById("demo14").innerHTML = num;
+
+			function myFunction10() {
+				document.getElementById("demo14").innerHTML = num.sort(function(a, b) {
+					return 0.5 - Math.random()
+				});
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>sort() - objects by number</h2>
+
+		<p>Sort objects by numberic properties usng sort():</p>
+
+		<p id="demo15"></p>
+
+		<button onclick="myFunction11()">SORT!</button>
+
+		<script>
+		var cars = [
+			{name:"Buick", year:2010},
+			{name:"Honda", year:1989},
+			{name:"Toyota", year:1950}
+		]
+
+		displayCars();
+
+		function myFunction11() {
+			cars.sort(function(a, b) {
+				return a.year - b.year
+			});
+			displayCars();
+		}
+
+		function displayCars() {
+			document.getElementById("demo15").innerHTML =
+			cars[0].name + " " + cars[0].year + "<br />" +
+			cars[1].name + " " + cars[1].year + "<br />" +
+			cars[2].name + " " + cars[2].year;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var cars = [
+				{name:"Buick", year:2010},
+				{name:"Honda", year:1989},
+				{name:"Toyota", year:1950}
+			]
+
+			displayCars();
+
+			function myFunction11() {
+				cars.sort(function(a, b) {
+					return a.year - b.year
+				});
+				displayCars();
+			}
+
+			function displayCars() {
+				document.getElementById("demo15").innerHTML =
+				cars[0].name + " " + cars[0].year + "<br />" +
+				cars[1].name + " " + cars[1].year + "<br />" +
+				cars[2].name + " " + cars[2].year;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>sort() - objects by string</h2>
+
+		<p>Sort objects by string properties using sort():</p>
+
+		<p id="demo16"></p>
+
+		<button onclick="myFunction12()">SORT!</button>
+
+		<script>
+		var cars = [
+			{name:"Honda", year:2010},
+			{name:"Buick", year:1989},
+			{name:"Toyota", year:1950}
+		]
+
+		displayCars();
+
+		function myFunction12() {
+			cars.sort(function(a, b) {
+				var x = a.name.toLowerCase();
+				var y = b.name.toLowerCase();
+				if (x < y) {return -1;}
+				if (x > y) {return 1;}
+				return 0;
+			});
+			displayCars();
+		}
+
+		function displayCars() {
+		  document.getElementById("demo16").innerHTML =
+		  cars[0].name + " " + cars[0].year + "<br>" +
+		  cars[1].name + " " + cars[1].year + "<br>" +
+		  cars[2].name + " " + cars[2].year;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var cars = [
+				{name:"Honda", year:2010},
+				{name:"Buick", year:1989},
+				{name:"Toyota", year:1950}
+			]
+
+			displayCars();
+
+			function myFunction12() {
+				cars.sort(function(a, b) {
+					var x = a.name.toLowerCase();
+					var y = b.name.toLowerCase();
+					if (x < y) {return -1;}
+					if (x > y) {return 1;}
+					return 0;
+				});
+				displayCars();
+			}
+
+			function displayCars() {
+			  document.getElementById("demo16").innerHTML =
+			  cars[0].name + " " + cars[0].year + "<br>" +
+			  cars[1].name + " " + cars[1].year + "<br>" +
+			  cars[2].name + " " + cars[2].year;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>splice()</h2>
+
+		<p>Add a new element to an array using splice():</p>
+
+		<p id="demo17"></p>
+
+		<button onclick="myFunction13()">SPLICE!</button>
+
+		<script>
+		var names = ["John", "Henry", "Brian", "Frank"];
+		document.getElementById("demo17").innerHTML = names;
+
+		function myFunction13() {
+			names.splice(2,0, "Charlie", "Harry");
+
+		document.getElementById("demo17").innerHTML = names;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var names = ["John", "Henry", "Brian", "Frank"];
+			document.getElementById("demo17").innerHTML = names;
+
+			function myFunction13() {
+				names.splice(2,0, "Charlie", "Harry");
+
+			document.getElementById("demo17").innerHTML = names;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>toString()</h2>
+
+		<p>Convert an array to a comma separated string using toString():</p>
+
+		<p id="demo18"></p>
+
+		<script>
+		var names = ["John", "Henry", "Brian", "Frank"];
+		document.getElementById("demo18").innerHTML =
+		names.toString();
+		</script>
+
+		<pre><code class="language-javascript">
+			var names = ["John", "Henry", "Brian", "Frank"];
+			document.getElementById("demo18").innerHTML =
+			names.toString();
+		</code></pre>
+
+		<hr />
+
+		<h2>unshift()</h2>
+
+		<p>Add new elements to the beginning of an array using unshift():</p>
+
+		<p id="demo19"></p>
+
+		<button onclick="myFunction14()">UNSHIFT!</button>
+
+		<script>
+		var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+		document.getElementById("demo19").innerHTML = colors;
+
+		function myFunction14() {
+			colors.unshift("azure");
+
+		document.getElementById("demo19").innerHTML = colors;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+			document.getElementById("demo19").innerHTML = colors;
+
+			function myFunction14() {
+				colors.unshift("azure");
+
+			document.getElementById("demo19").innerHTML = colors;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Statements</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Statements</h1>
+
+		<p>In HTML, JavaScript statements are "instructions" to be executed by the browser:</p>
+
+		<h2>Commands</h2>
+
+		<p id="demo1"></p>
+
+		<script>
+		document.getElementById("demo1").innerHTML = "Well, hello there!";
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo1").innerHTML = "Well, hello there!";
+		</code></pre>
+
+		<hr />
+
+		<h2>Sequence</h2>
+
+		<p>JavaScript code is a sequence of JavaScript statements:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		var x, y, z;
+		x = 5;
+		y = 8;
+		z = x + y;
+		document.getElementById("demo2").innerHTML = z;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x, y, z;
+			x = 5;
+			y = 8;
+			z = x + y;
+			document.getElementById("demo2").innerHTML = z;
+		</code></pre>
+
+		<hr />
+
+		<h2>Separation</h2>
+
+		<p>JavaScript statements are separated with a semicolon:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var a, b, c;
+		a = 5;
+		b = 4;
+		c = a * b;
+		document.getElementById("demo3").innerHTML = c;
+		</script>
+
+		<pre><code class="language-javascript">
+			var a, b, c;
+			a = 5;
+			b = 4;
+			c = a * b;
+			document.getElementById("demo3").innerHTML = c;
+		</code></pre>
+
+		<hr />
+
+		<h2>Multiple Statements</h2>
+
+		<p>Mutiple statements on one line is allowed:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var a, b, c;
+		a = 5; b = 2; c = 3 * (a + b);
+
+		document.getElementById("demo4").innerHTML = c;
+		</script>
+
+		<pre><code class="language-javascript">
+			var a, b, c;
+			a = 5; b = 2; c = 3 * (a + b);
+			document.getElementById("demo4").innerHTML = c;
+		</code></pre>
+
+		<hr />
+
+		<h2>Code Blocks</h2>
+
+		<p>JavaScript statements can be grouped together in code blocks. Code blocks are written between mustaches {} (curly brackets):</p>
+
+		<button type="button" onclick="myFunction()">Click Me!</button>
+
+		<p id="demo5"></p>
+		<p id="demo6"></p>
+
+		<script>
+		function myFunction() {
+			document.getElementById("demo5").innerHTML = "Well, hello there!";
+
+			document.getElementById("demo6").innerHTML = "How are you?";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction() {
+				document.getElementById("demo5").innerHTML = "Well, hello there!";
+
+				document.getElementById("demo6").innerHTML = "How are you?";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Breaking Code Lines</h2>
+
+		<p>It is best to break a long line of code after an operator or a comma:</p>
+
+		<p id="demo7"></p>
+
+		<script>
+		document.getElementById("demo7").innerHTML =
+		"This is a long line of code because this is sentence is fairly long, so I broke the line of code at the comma!";
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo7").innerHTML =
+			"This is a long line of code because this is sentence is fairly long, so I broke the line of code at the comma!";
+		</code></pre>
+
+	</body>
+
+</html>

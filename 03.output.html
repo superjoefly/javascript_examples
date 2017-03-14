@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Output</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Output</h1>
+
+		<p>There are several ways to output data into a browser window using JavaScript:</p>
+
+		<ul>
+			<li>Writing into an HTML element, using <b>innerHTML</b></li>
+			<li>Writing into the HTML output, using <b>document.write()</b></li>
+			<li>Writing into an alert box, using <b>window.alert()</b></li>
+			<li>Writing into the browser console, using <b>console.log()</b></li>
+		</ul>
+
+		<h3>Example: window.alert</h3>
+
+		<button type="button" onclick="myFunction()">window.alert</button>
+
+		<script>
+		function myFunction() {
+		window.alert("Hello There!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction() {
+			window.alert("Hello There!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h3>Example: document.write</h3>
+
+		<button type="button" onclick="myFunction2()">document.write</button>
+
+		<script>
+		function myFunction2() {
+		document.write("What's happenin? <br /> Refresh page to continue viewing output examples!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+			document.write("What's happenin? <br /> Refresh page to continue viewing output examples!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h3>Example: write into element</h3>
+
+		<button type="button" onclick="myFunction3()">Write into p-element!</button>
+
+		<p id="demo1">This is some text!</p>
+
+		<script>
+		function myFunction3() {
+			document.getElementById("demo1").innerHTML += " This text has been added into the paragraph element!";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				document.getElementById("demo1").innerHTML += " This text has been added into the paragraph element!";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h3>Example: write into browser console</h3>
+
+		<p><strong>To write into the broser console, select "console" in the debugger menu or by pressing (f12). Then click the console.log button:</strong></p>
+
+		<button type="button" onclick="myFunction4()">console.log</button>
+
+		<script>
+		function myFunction4() {
+			console.log("Hi There!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction4() {
+				console.log("Hi There!");
+			}
+		</code></pre>
+
+	</body>
+
+</html>

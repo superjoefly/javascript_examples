@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>History Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>History Object</h1>
+
+		<p>The window.history object contains the browser's history. It can be written without the window prefix.</p>
+
+		<h2>Number of URLs</h2>
+
+		<p>Display the number of URLs in the history list:</p>
+
+		<button onclick="urlNumb()">Get URL #</button>
+
+		<p id="demo1"></p>
+
+		<script>
+		function urlNumb() {
+			document.getElementById("demo1").innerHTML = history.length;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function urlNumb() {
+				document.getElementById("demo1").innerHTML = history.length;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Back Button</h2>
+
+		<p>Create a back button on a page:</p>
+
+		<button onclick="goBack()">Go Back</button>
+
+		<script>
+		function goBack() {
+			window.history.back();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function goBack() {
+				window.history.back();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Forward Button</h2>
+
+		<p>Create a forward button on a page:</p>
+
+		<button onclick="goForward()">Go Forward</button>
+
+		<script>
+		function goForward() {
+			window.history.forward();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function goForward() {
+				window.history.forward();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Go To History</h2>
+
+		<p>Go to a specific URL from the history list:</p>
+
+		<button onclick="goTo()">Load URL</button>
+
+		<script>
+		function goTo() {
+			window.history.go(-2);
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function goTo() {
+				window.history.go(-2);
+			}
+		</code></pre>
+
+	</body>
+
+</html>

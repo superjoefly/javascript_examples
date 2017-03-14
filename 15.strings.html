@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Strings</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Strings</h1>
+
+		<p>JavaScript strings are used for storing and manipulating text.</p>
+
+		<p>A JavaScript string simply stores a series of characters like "John Doe".</p>
+
+		<p>A string can be any text inside quotes. You can use single or double quotes.</p>
+
+		<h2>String With Single or Double Quotes</h2>
+
+		<p id="demo1"></p>
+
+		<script>
+		var firstName = "Joey", lastName = 'Atwood';
+
+		document.getElementById("demo1").innerHTML = firstName + " " + lastName;
+		</script>
+
+		<pre><code class="language-javascript">
+			var firstName = "Joey", lastName = 'Atwood';
+
+			document.getElementById("demo1").innerHTML = firstName + " " + lastName;
+		</code></pre>
+
+		<hr />
+
+		<h2>String Examples:</h2>
+
+		<p id="demo2"></p>
+
+		<script>
+		var firstName = "Joey",
+		lastName = 'Atwood',
+		car = "Audi",
+		favoriteQuote = "'To thine own self, be true!'";
+
+		document.getElementById("demo2").innerHTML =
+		firstName + "<br />" +
+		lastName + "<br />" +
+		car + "<br />" +
+		favoriteQuote;
+		</script>
+
+		<pre><code class="language-javascript">
+			var firstName = "Joey",
+			lastName = 'Atwood',
+			car = "Audi",
+			favoriteQuote = "'To thine own self, be true!'";
+
+			document.getElementById("demo2").innerHTML =
+			firstName +
+			lastName +
+			car +
+			favoriteQuote;
+
+			//add line breaks
+		</code></pre>
+
+		<hr />
+
+		<h2>Backslash Before Quotes Accepts Quotes as Quotes</h2>
+
+		<p id="demo3"></p>
+
+		<script>
+		var x = 'It\'s alright';
+		var y = "We are the so called \'Champions\.'";
+
+		document.getElementById("demo3").innerHTML = x + " " + y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 'It\'s alright';
+			var y = "We are the so called \'Champions\.'";
+
+			document.getElementById("demo3").innerHTML = x + " " + y;
+		</code></pre>
+
+		<hr />
+
+		<h2>Find the Length of a String</h2>
+
+		<p id="demo4"></p>
+
+		<script>
+		var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		document.getElementById("demo4").innerHTML = txt.length;
+		</script>
+
+		<pre><code class="language-javascript">
+			var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			document.getElementById("demo4").innerHTML = txt.length;
+		</code></pre>
+
+		<hr />
+
+		<h2>Break Text String with a Backslash</h2>
+
+		<p id="demo5"></p>
+
+		<script>
+		document.getElementById("demo5").innerHTML =
+		"Hello \ there!";
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo5").innerHTML =
+			"Hello \ there!";
+		</code></pre>
+
+		<hr />
+
+		<h2>You Cannot Break a Codeline with a Backslash</h2>
+
+		<p id="demo6">You can't put a backslash in a line of code! (it will not display)</p>
+
+		<script>
+		document.getElementById("demo6").innerHTML = \
+		"Hello There!";
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo6").innerHTML = \
+			"Hello There!";
+		</code></pre>
+
+		<hr />
+
+		<h2>Find Position of First Occurrence of Text in a String (.indexOf())</h2>
+
+		<p id="p1">Find where the word text is in this sentence by using indexOf()</p>
+
+		<p id="demo7"></p>
+
+		<button onclick="findText()">Find Text</button>
+
+		<script>
+		function findText() {
+			var string = document.getElementById("p1").innerHTML;
+			var position = string.indexOf("text");
+
+			document.getElementById("demo7").innerHTML = position;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function findText() {
+				var string = document.getElementById("p1").innerHTML;
+				var position = string.indexOf("text");
+
+				document.getElementById("demo7").innerHTML = position;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Search for Text in a String and Return Text if Found (.match())</h2>
+
+		<button onclick="findString()">Find String</button>
+
+		<p id="demo8"></p>
+
+		<script>
+		function findString() {
+			var string = "The rain in Spain stays mainly in the plain";
+
+			var found = string.match(/ain/g);
+
+			document.getElementById("demo8").innerHTML = found;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function findString() {
+				var string = "The rain in Spain stays mainly in the plain";
+
+				var found = string.match(/ain/g);
+
+				document.getElementById("demo8").innerHTML = found;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Replace Characters in a String (.replace())</h2>
+
+		<p id="demo9">Please visit Google!</p>
+
+		<button onclick="replace()">Replace</button>
+
+		<script>
+		function replace() {
+			var str = document.getElementById("demo9").innerHTML;
+			var txt = str.replace("Google", "Bing");
+
+			document.getElementById("demo9").innerHTML = txt;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function replace() {
+				var str = document.getElementById("demo9").innerHTML;
+				var txt = str.replace("Google", "Bing");
+
+				document.getElementById("demo9").innerHTML = txt;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Convert String to Upper Case (.toUpperCase())</h2>
+
+		<p id="demo10">This is really, really cool!</p>
+
+		<button onclick="toUpper()">To Upper</button>
+
+		<script>
+		function toUpper() {
+			var txt = document.getElementById("demo10").innerHTML;
+
+			document.getElementById("demo10").innerHTML = txt.toUpperCase();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function toUpper() {
+				var txt = document.getElementById("demo10").innerHTML;
+
+				document.getElementById("demo10").innerHTML = txt.toUpperCase();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Convert String to Lower Case (.toLowerCase())</h2>
+
+		<p id="demo11">THIS IS ALSO REALLY, REALLY COOL!</p>
+
+		<button onclick="toLower()">To Lower</button>
+
+		<script>
+		function toLower() {
+			var txt = document.getElementById("demo11").innerHTML;
+
+			document.getElementById("demo11").innerHTML = txt.toLowerCase();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function toLower() {
+				var txt = document.getElementById("demo11").innerHTML;
+
+				document.getElementById("demo11").innerHTML = txt.toLowerCase();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Split a String into an Array (.split())</h2>
+
+		<p id="demo12"></p>
+
+		<button onclick="splitString()">Split</button>
+
+		<script>
+		function splitString() {
+			var str = "a,b,c,d,e,f,g";
+			var arr = str.split(",");
+
+			document.getElementById("demo12").innerHTML = arr[2];
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function splitString() {
+				var str = "a,b,c,d,e,f,g";
+				var arr = str.split(",");
+
+				document.getElementById("demo12").innerHTML = arr[2];
+			}
+		</code></pre>
+
+	</body>
+
+</html>

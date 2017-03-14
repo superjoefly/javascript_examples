@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Conditionals</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+
+
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Conditionals</h1>
+
+		<p>Conditional statements are used to perform different actions based on different conditions.</p>
+
+		<p>JavaScript offers the following conditional statements:</p>
+
+		<ul>
+			<li><b>if</b>: specifies a block of code to be executed if the condition is true</li>
+			<li><b>else</b>: specifies a block of code to be executed if the same condition is false</li>
+			<li><b>else if</b>: specifies a block of code to be executed if the first condition is false</li>
+			<li><b>switch</b>: specifies many alternative blocks of code to be executed</li>
+		</ul>
+
+		<hr />
+
+		<h2>if statement</h2>
+
+		<p>Display "Have a great day!" <b>if</b> the hour is less than 18:00<:/p>
+
+		<p id="demo1">Good Evening</p>
+
+		<script>
+		if (new Date().getHours() < 18) {
+			document.getElementById("demo1").innerHTML =
+			"Have a great day!";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			<script>
+			if (new Date().getHours() < 18) {
+				document.getElementById("demo1").innerHTML =
+				"Have a great day!";
+			}
+			</script>
+		</code></pre>
+
+		<hr />
+
+		<h2>else statement</h2>
+
+		<p>Display a time based greeting:</p>
+
+		<button onclick="myFunction1()">Greeting!</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function myFunction1() {
+			var hour = new Date().getHours();
+			var greeting;
+			if (hour < 18) {
+				greeting = "Have a great day!";
+			}	else {
+				greeting = "Hava a great night!";
+			}
+			document.getElementById("demo2").innerHTML = greeting;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				var hour = new Date().getHours();
+				var greeting;
+				if (hour < 18) {
+					greeting = "Have a great day!";
+				}	else {
+					greeting = "Hava a great night!";
+				}
+				document.getElementById("demo2").innerHTML = greeting;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>else if statement</h2>
+
+		<p>Display a time based greeting:</p>
+
+		<button onclick="myFunction2()">Greeting!</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		var time = new Date().getHours();
+		var greeting;
+		function myFunction2() {
+			if (time < 10) {
+				greeting = "Have a great morning!";
+			} else if (time < 20) {
+				greeting = "Have a great day!";
+			}	else {
+				greeting = "Have a great night!";
+			}
+			document.getElementById("demo3").innerHTML = greeting;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var time = new Date().getHours();
+			var greeting;
+			function myFunction2() {
+				if (time < 10) {
+					greeting = "Have a great morning!";
+				} else if (time < 20) {
+					greeting = "Have a great day!";
+				}	else {
+					greeting = "Have a great night!";
+				}
+				document.getElementById("demo3").innerHTML = greeting;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Random Link</h2>
+
+		<p>Display a random link:</p>
+
+		<button onclick="myFunction3()">Get Link!</button>
+
+		<p id="demo4"></p>
+
+		<script>
+		function myFunction3() {
+			if (Math.random() < 0.5) {
+				text = "<a href='http://www.bing.com'>Bing!</a>";
+			}	else {
+				text = "<a href='http://www.google.com'>Google!</a>";
+			}
+			document.getElementById("demo4").innerHTML = text;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				if (Math.random() < 0.5) {
+					text = "<a href='http://www.bing.com'>Bing!</a>";
+				}	else {
+					text = "<a href='http://www.google.com'>Google!</a>";
+				}
+				document.getElementById("demo4").innerHTML = text;
+			}
+
+			//for this example you must enter the h-ref in place of the link
+		</code></pre>
+
+		<hr />
+
+		<h2>Switch Statement</h2>
+
+		<p id="demo5"></p>
+
+		<script>
+		var day;
+		switch (new Date().getDay()) {
+			case 0:
+				day = "Sunday";
+				break;
+			case 1:
+				day = "Monday";
+				break;
+			case 2:
+				day = "Tuesday";
+				break;
+			case 3:
+				day = "Wednesday";
+				break;
+			case 4:
+				day = "Thursday";
+				break;
+			case 5:
+				day = "Friday";
+				break;
+			case 6:
+				day = "Saturday";
+		}
+		document.getElementById("demo5").innerHTML =
+		"Today's date is " + day;
+		</script>
+
+		<pre><code class="language-javascript">
+			var day;
+			switch (new Date().getDay()) {
+				case 0:
+					day = "Sunday";
+					break;
+				case 1:
+					day = "Monday";
+					break;
+				case 2:
+					day = "Tuesday";
+					break;
+				case 3:
+					day = "Wednesday";
+					break;
+				case 4:
+					day = "Thursday";
+					break;
+				case 5:
+					day = "Friday";
+					break;
+				case 6:
+					day = "Saturday";
+			}
+			document.getElementById("demo5").innerHTML =
+			"Today's date is " + day;
+		</code></pre>
+
+	</body>
+
+</html>

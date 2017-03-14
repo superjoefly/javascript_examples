@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Area Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Area Object</h1>
+
+		<h2>The following image-map will be used for the examples on this page:</h2>
+
+		<img src="images/sunearth.jpg" width="512" height="288" border="0" usemap="#map" />
+
+		<map name="map">
+		<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+		<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+		<!-- #$-:Please do not edit lines starting with "#$" -->
+		<!-- #$VERSION:2.3 -->
+		<!-- #$AUTHOR:Joey -->
+		<area id="sun" shape="rect" alt="hot sun" target="_self" coords="162,70,345,233" href="images/sun.jpg" />
+
+		<area id="earth" shape="circle" alt="pretty planet" coords="424,148,73" href="images/earth.jpg" />
+
+		</map>
+
+		<h2>Alternate Text</h2>
+
+		<p>Find the alternate text of an image map area:</p>
+
+		<button onclick="myFunction1()">Get Alt Text</button>
+
+		<p id="demo1"></p>
+
+		<script>
+		function myFunction1() {
+			var x = document.getElementById("sun").alt;
+			document.getElementById("demo1").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				var x = document.getElementById("sun").alt;
+				document.getElementById("demo1").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Coordinates</h2>
+
+		<p>Find the coordinates of an area:</p>
+
+		<button onclick="myFunction2()">Get Area</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function myFunction2() {
+			var x = document.getElementById("earth").coords;
+			document.getElementById("demo2").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				var x = document.getElementById("earth").coords;
+				document.getElementById("demo2").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Shape</h2>
+
+		<p>Find the shape of an area:</p>
+
+		<button onclick="myFunction3()">Get Shape</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		function myFunction3() {
+			var x = document.getElementById("sun").shape;
+			document.getElementById("demo3").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				var x = document.getElementById("sun").shape;
+				document.getElementById("demo3").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>href</h2>
+
+		<p>Find the href of an area:</p>
+
+		<button onclick="myFunction4()">Get href</button>
+
+		<p id="demo4"></p>
+
+		<script>
+		function myFunction4() {
+		var x = document.getElementById("earth").href;
+		document.getElementById("demo4").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction4() {
+			var x = document.getElementById("earth").href;
+			document.getElementById("demo4").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Protocol</h2>
+
+		<p>Find the protocol of the href attribute of an area:</p>
+
+		<button onclick="myFunction5()">Get Protocol</button>
+
+		<p id="demo5"></p>
+
+		<script>
+		function myFunction5() {
+			var x = document.getElementById("sun").protocol;
+			document.getElementById("demo5").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction5() {
+				var x = document.getElementById("sun").protocol;
+				document.getElementById("demo5").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Hostname</h2>
+
+		<p>Find the hostname of the href attribute of an area:</p>
+
+		<button onclick="myFunction6()">Get Hostname</button>
+
+		<p id="demo6"></p>
+
+		<script>
+		function myFunction6() {
+			var x = document.getElementById("earth").hostname;
+			document.getElementById("demo6").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction6() {
+				var x = document.getElementById("earth").hostname;
+				document.getElementById("demo6").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Port Number</h2>
+
+		<p>Find the port number of the href attribute of an area:</p>
+
+		<button onclick="myFunction7()">Get Port Number</button>
+
+		<p id="demo7"></p>
+
+		<script>
+		function myFunction7() {
+			var x = document.getElementById("sun").port;
+			document.getElementById("demo7").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction7() {
+				var x = document.getElementById("sun").port;
+				document.getElementById("demo7").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Pathname</h2>
+
+		<p>Find the pathname of the href attribute of an area:</p>
+
+		<button onclick="myFunction8()">Get Pathname</button>
+
+		<p id="demo8"></p>
+
+		<script>
+		function myFunction8() {
+			var x = document.getElementById("earth").pathname;
+			document.getElementById("demo8").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction8() {
+				var x = document.getElementById("earth").pathname;
+				document.getElementById("demo8").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Target</h2>
+
+		<p>Find the value of the target attribute of an area:</p>
+
+		<button onclick="myFunction9()">Get Target</button>
+
+		<p id="demo9"></p>
+
+		<script>
+		function myFunction9() {
+			var x = document.getElementById("sun").target;
+			document.getElementById("demo9").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction9() {
+				var x = document.getElementById("sun").target;
+				document.getElementById("demo9").innerHTML = x;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

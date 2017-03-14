@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Option and Select Objects</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Option and Select Objects</h1>
+
+		<h2>Enable/Disable Dropdown</h2>
+
+		<p>Enable and disable a dropdown list:</p>
+
+		<form>
+			<select id="select1">
+				<option>Red</option>
+				<option>Blue</option>
+				<option>Green</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+		</form>
+		<br />
+		<button type="button" onclick="disable()" value="Disable/Enable">Disable/Enable</button>
+
+		<script>
+		function disable() {
+			var x = document.getElementById("select1");
+			if (x.disabled === true) {
+				x.disabled = false;
+			} else {
+				x.disabled = true;
+			}
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function disable() {
+				var x = document.getElementById("select1");
+				if (x.disabled === true) {
+					x.disabled = false;
+				} else {
+					x.disabled = true;
+				}
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Get ID</h2>
+
+		<p>Get the id of the form that contains the dropdown list:</p>
+
+		<form id="form1">
+			<select id="select2">
+				<option>Red</option>
+				<option>Blue</option>
+				<option>Green</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+		</form>
+
+		<br />
+
+		<button onclick="getId()">Get Id</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function getId() {
+			var x = document.getElementById("select2").form.id;
+			document.getElementById("demo2").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function getId() {
+				var x = document.getElementById("select2").form.id;
+				document.getElementById("demo2").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Options</h2>
+
+		<p>Get the number of options in the dropdown list:</p>
+
+		<form>
+			<select id="select3">
+				<option>Red</option>
+				<option>Blue</option>
+				<option>Green</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+		</form>
+
+		<br />
+
+		<button onclick="getOptions()">Get Options #</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		function getOptions() {
+			document.getElementById("demo3").innerHTML =
+			document.getElementById("select3").length;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function getOptions() {
+				document.getElementById("demo3").innerHTML =
+				document.getElementById("select3").length;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Multiline Dropdown</h2>
+
+		<p>Make the dropdown list multiline by changing its size:</p>
+
+		<form>
+			<select id="select4">
+				<option>Red</option>
+				<option>Blue</option>
+				<option>Green</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+		</form>
+
+		<br />
+
+		<button onclick="changeSize()">Change Size</button>
+
+		<script>
+		function changeSize() {
+			document.getElementById("select4").size = 3;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function changeSize() {
+				document.getElementById("select4").size = 3;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Multi-Select</h2>
+
+		<p>Select multiple options in a dropdown list using the "shift" key:</p>
+
+		<form>
+			<select id="select5">
+				<option>Red</option>
+				<option>Blue</option>
+				<option>Green</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+		</form>
+
+		<br />
+
+		<button onclick="multiSelect()">Multi Select</button>
+
+		<script>
+		function multiSelect() {
+			document.getElementById("select5").multiple = true;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function multiSelect() {
+				document.getElementById("select5").multiple = true;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Display Selected</h2>
+
+		<p>Display the selected options in a dropdown list:</p>
+
+		<form>
+			<select id="select6">
+				<option>Red</option>
+				<option>Blue</option>
+				<option>Green</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+		</form>
+
+		<br />
+
+		<button onclick="displaySelect()">Display Selected</button>
+
+		<p id="demo6"></p>
+
+		<script>
+		function displaySelect() {
+			var obj = document.getElementById("select6");
+			document.getElementById("demo6").innerHTML = obj.options[obj.selectedIndex].text;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function displaySelect() {
+				var obj = document.getElementById("select6");
+				document.getElementById("demo6").innerHTML = obj.options[obj.selectedIndex].text;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Display All Options</h2>
+
+		<p>Display all options in a dropdown list:</p>
+
+		<form>
+			<select id="select7">
+				<option>Red</option>
+				<option>Blue</option>
+				<option>Green</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+		</form>
+
+		<br />
+
+		<button onclick="displayOptions()">Display Options</button>
+
+		<p id="demo7"></p>
+
+		<script>
+		function displayOptions() {
+			var x = document.getElementById("select7");
+			var txt = ""
+			var i;
+			for (i = 0; i < x.length; i++) {
+				txt += x.options[i].text + " ";
+			}
+			document.getElementById("demo7").innerHTML = txt;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function displayOptions() {
+				var x = document.getElementById("select7");
+				var txt = ""
+				var i;
+				for (i = 0; i < x.length; i++) {
+					txt += x.options[i].text + " ";
+				}
+				document.getElementById("demo7").innerHTML = txt;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Index</h2>
+
+		<p>Display the index of a selected option in a dropdown list:</p>
+
+		<form>
+			<select id="select8">
+				<option>Red</option>
+				<option>Blue</option>
+				<option>Green</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+		</form>
+
+		<br />
+
+		<button onclick="displayIndex()">Display Index</button>
+
+		<p id="demo8"></p>
+
+		<script>
+		function displayIndex() {
+			var x = document.getElementById("select8").selectedIndex;
+			document.getElementById("demo8").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function displayIndex() {
+				var x = document.getElementById("select8").selectedIndex;
+				document.getElementById("demo8").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Change Text</h2>
+
+		<p>Change the text of the selected option:</p>
+
+		<form>
+			<select id="select9">
+				<option>Red</option>
+				<option>Blue</option>
+				<option>Green</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+		</form>
+
+		<br />
+
+		<button onclick="changeText()">Change Text</button>
+
+		<script>
+		function changeText() {
+			var x = document.getElementById("select9");
+			x.options[x.selectedIndex].text = "Brown";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function changeText() {
+				var x = document.getElementById("select9");
+				x.options[x.selectedIndex].text = "Brown";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Remove Options</h2>
+
+		<p>Remove options from a dropdown list:</p>
+
+		<form>
+			<select id="select10">
+				<option>Red</option>
+				<option>Blue</option>
+				<option>Green</option>
+				<option>Orange</option>
+				<option>Yellow</option>
+			</select>
+		</form>
+
+		<br />
+
+		<button onclick="removeOption()">Remove Option</button>
+
+		<script>
+		function removeOption() {
+			var x = document.getElementById("select10");
+			x.remove(x.selectedIndex);
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function removeOption() {
+				var x = document.getElementById("select10");
+				x.remove(x.selectedIndex);
+			}
+		</code></pre>
+
+	</body>
+
+</html>

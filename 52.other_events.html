@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>More Event Examples</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body id="body" class="w3-margin" onkeyup="keyCode(event)" onmousedown="isKeyPressed(event)">
+
+		<h1>More Event Examples</h1>
+
+		<h2>onkeyup (display key code)</h2>
+
+		<p>Click on the screen and then press a keyboard key to get the keycode:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		//onkeyup event attached to body element
+		function keyCode(event) {
+			document.getElementById("demo1").innerHTML = event.keyCode;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			//onkeyup event attached to body element
+			function keyCode(event) {
+				document.getElementById("demo1").innerHTML = event.keyCode;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onmousedown (show coordinates)</h2>
+
+		<p>Click the paragraph below to display the x/y coordinates of the mouse pointer:</p>
+
+		<p id="demo2"></p>
+
+		<p onmousedown="showCoor()">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+
+		<script>
+		//onmousedown attached to paragraph element
+		function showCoor() {
+			document.getElementById("demo2").innerHTML =
+			"X = " + event.clientX + " ,Y = " + event.clientY;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			//onmousedown attached to paragraph element
+			function showCoor() {
+				document.getElementById("demo2").innerHTML =
+				"X = " + event.clientX + " ,Y = " + event.clientY;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onmousedown (show coordinates * relative to screen)</h2>
+
+		<p>Click the paragraph below to get the coordinates of the mouse pointer <b>relative to the screen:</b></p>
+
+		<p id="demo3"></p>
+
+		<p onmousedown="getCoor()">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+
+		<script>
+		//onmousedown attached to paragraph element
+		function getCoor() {
+			document.getElementById("demo3").innerHTML =
+			"X = " + event.screenX + " ,Y = " + event.screenY;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			//onmousedown attached to paragraph element
+			function getCoor() {
+				document.getElementById("demo3").innerHTML =
+				"X = " + event.screenX + " ,Y = " + event.screenY;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onmousedown (is key pressed?)</h2>
+
+		<p>Display an alert that tells you if the shift key was pressed or not:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		//onmousedown attached to body element
+		function isKeyPressed(event) {
+			var txt = "The shift key was NOT pressed!";
+			if (event.shiftKey == 1) {
+				txt = "The shift key WAS pressed!";
+			}
+			document.getElementById("demo4").innerHTML = txt;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			//onmousedown attached to body element
+			function isKeyPressed(event) {
+				var txt = "The shift key was NOT pressed!";
+				if (event.shiftKey == 1) {
+					txt = "The shift key WAS pressed!";
+				}
+				document.getElementById("demo4").innerHTML = txt;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

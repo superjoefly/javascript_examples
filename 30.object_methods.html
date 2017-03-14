@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Object Methods</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>JavaScript Object Methods</h1>
+
+		<p>JavaScript methods are actions that can be performed on objects.</p>
+
+		<p>A JavaScript method is a property containing a function definition:</p>
+
+		<hr />
+
+		<h2>Accessing a Method</h2>
+
+		<p>Access an object method using <b>.method</b>:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		var person = {
+			firstName: "Joe",
+			lastName: "Blow",
+			age: 37,
+			id: 3333,
+			fullName: function() {
+				return this.firstName + " " + this.lastName;
+			}
+		};
+
+		document.getElementById("demo1").innerHTML = person.fullName();
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {
+				firstName: "Joe",
+				lastName: "Blow",
+				age: 37,
+				id: 3333,
+				fullName: function() {
+					return this.firstName + " " + this.lastName;
+				}
+			};
+
+			document.getElementById("demo1").innerHTML = person.fullName();
+		</code></pre>
+
+		<hr />
+
+		<h2>Return Function Definition</h2>
+
+		<p id="demo2"></p>
+
+		<script>
+		var person = {
+			firstName: "Joe",
+			lastName: "Blow",
+			age: 37,
+			id: 3333,
+			fullName: function() {
+				return this.firstName + " " + this.lastName;
+			}
+		};
+
+		document.getElementById("demo2").innerHTML = person.fullName;
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {
+				firstName: "Joe",
+				lastName: "Blow",
+				age: 37,
+				id: 3333,
+				fullName: function() {
+					return this.firstName + " " + this.lastName;
+				}
+			};
+
+			document.getElementById("demo2").innerHTML = person.fullName;
+		</code></pre>
+
+		<hr />
+
+		<h2>Built-In Method</h2>
+
+		<p>Use the <b>toUpperCase()</b> method to convert the text to uppercase:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var message = "Hello There!";
+		var x = message.toUpperCase();
+
+		document.getElementById("demo3").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var message = "Hello There!";
+			var x = message.toUpperCase();
+
+			document.getElementById("demo3").innerHTML = x;
+		</code></pre>
+
+		<h2>Adding New Methods</h2>
+
+		<p>Add a method to an object inside a constructor function:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		function person(firstName, lastName, age, eyeColor) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.age = age;
+			this.eyeColor = eyeColor;
+			this.changeName = function(name) {
+				this.lastName = name;
+			}
+		}
+		var myFriend = new person("Robert", "Taylor", 42, "blue");
+		myFriend.changeName("Bob");
+		document.getElementById("demo4").innerHTML = myFriend.lastName;
+		</script>
+
+		<pre><code class="language-javascript">
+			function person(firstName, lastName, age, eyeColor) {
+				this.firstName = firstName;
+				this.lastName = lastName;
+				this.age = age;
+				this.eyeColor = eyeColor;
+				this.changeName = function(name) {
+					this.lastName = name;
+				}
+			}
+			var myFriend = new person("Robert", "Taylor", 42, "blue");
+			myFriend.changeName("Bob");
+			document.getElementById("demo4").innerHTML = myFriend.lastName;
+		</code></pre>
+
+	</body>
+
+</html>

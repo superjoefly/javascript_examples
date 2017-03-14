@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Booleans</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Booleans</h1>
+
+		<p>A JavaScript boolean represents either <b>true</b> or <b>false</b>.</p>
+
+		<hr />
+
+		<h2>Value of Boolean</h2>
+
+		<p>Display the value of boolean (10 > 9):</p>
+
+		<p id="demo1"></p>
+
+		<button onclick="myFunction1()">True or False</button>
+
+		<script>
+		function myFunction1() {
+			document.getElementById("demo1").innerHTML = Boolean(10 > 9);
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				document.getElementById("demo1").innerHTML = Boolean(10 > 9);
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Value of Boolean</h2>
+
+		<p>Display the value of boolean (10 < 9):</p>
+
+		<p id="demo2"></p>
+
+		<button onclick="myFunction2()">True or False</button>
+
+		<script>
+		function myFunction2() {
+			document.getElementById("demo2").innerHTML =
+			Boolean(10 < 9);
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				document.getElementById("demo2").innerHTML =
+				Boolean(10 < 9);
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Real Values</h2>
+
+		<p>Everything with a real value (except 0) is true:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		document.getElementById("demo3").innerHTML =
+		Boolean(100) + "<br />" +
+		Boolean(3.14) + "<br />" +
+		Boolean(-20) + "<br />" +
+		Boolean("World") + "<br />" +
+		Boolean('false') + "<br />" +
+		Boolean(1 + 8 + 3.14) + "<br />" +
+		Boolean("0") + "<br />" +
+		Boolean(0) + "<br />" +
+		Boolean(-0);
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo3").innerHTML =
+			Boolean(100) +
+			Boolean(3.14) +
+			Boolean(-20) +
+			Boolean("World") +
+			Boolean('false') +
+			Boolean(1 + 8 + 3.14) +
+			Boolean("0") +
+			Boolean(0) +
+			Boolean(-0);
+
+			//add line breaks!
+		</code></pre>
+
+		<hr />
+
+		<h2>Empty String</h2>
+
+		<p>The boolean value of an empty string is false:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		document.getElementById("demo4").innerHTML =
+		Boolean("");
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo4").innerHTML =
+			Boolean("");
+		</code></pre>
+
+		<hr />
+
+		<h2>Undefined</h2>
+
+		<p>The boolean value of undefined is false:</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		var x;
+		document.getElementById("demo5").innerHTML =
+		Boolean(x);
+		</script>
+
+		<pre><code class="language-javascript">
+			var x;
+			document.getElementById("demo5").innerHTML =
+			Boolean(x);
+		</code></pre>
+
+		<hr />
+
+		<h2>Null</h2>
+
+		<p>The boolean value of null is false:</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		var x = null;
+		document.getElementById("demo6").innerHTML =
+		Boolean(x);
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = null;
+			document.getElementById("demo6").innerHTML =
+			Boolean(x);
+		</code></pre>
+
+		<hr />
+
+		<h2>False</h2>
+
+		<p>The boolean value of false is false:</p>
+
+		<p id="demo7"></p>
+
+		<script>
+		var x = false;
+		document.getElementById("demo7").innerHTML =
+		Boolean(x);
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = false;
+			document.getElementById("demo7").innerHTML =
+			Boolean(x);
+		</code></pre>
+
+		<hr />
+
+		<h2>NaN</h2>
+
+		<p>The boolean value of NaN is false:</p>
+
+		<p id="demo8"></p>
+
+		<script>
+		var x = 10 / "j";
+		document.getElementById("demo8").innerHTML =
+		Boolean(x);
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 10 / "j";
+			document.getElementById("demo8").innerHTML =
+			Boolean(x);
+		</code></pre>
+
+	</body>
+
+</html>

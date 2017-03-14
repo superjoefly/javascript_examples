@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Load Events</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin" onload="myFunction1()" onunload="myFunction3()" onresize="myFunction4()">
+
+		<h1>Load Events</h1>
+
+		<h2>onload (display alert)</h2>
+
+		<p>Display an alert when the page has been loaded:</p>
+
+		<script>
+		//onload event attached to body element
+		function myFunction1() {
+			alert ("The page has been loaded!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			//onload event attached to body element
+			function myFunction1() {
+				alert ("The page has been loaded!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onload (display alert)</h2>
+
+		<p>Display an alert when an image has been loaded:</p>
+
+		<img src="images/bunny1.jpg" alt="cute bunny" onload="myFunction2()"/>
+
+		<script>
+		//onload event attached to image element
+		function myFunction2() {
+			alert("The image has been loaded!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			//onload event attached to image element
+			function myFunction2() {
+				alert("The image has been loaded!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onload (display error)</h2>
+
+		<p>Display an error message (alert) when there is an error loading an image:</p>
+
+		<img src="x" alt="none" onerror="imgError()" />
+
+		<script>
+		//onload event attached to image element
+		function imgError() {
+			alert("The image could not be loaded!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			//onload event attached to image element
+			function imgError() {
+				alert("The image could not be loaded!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onunload (display a message)</h2>
+
+		<p>Display an error (alert) when the window is closed (or press F5 to reload):</p>
+
+		<script>
+		//onunload event attached to body element
+		function myFunction3() {
+			alert("Thanks for visiting!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			//onunload event attached to body element
+			function myFunction3() {
+				alert("Thanks for visiting!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onresize (display dimensions)</h2>
+
+		<p>Display the dimensions of the window when it is resized: (resize the window to see the effect!)</p>
+
+		<p id="demo"></p>
+
+		<script>
+		//onresize event attached to body element
+		function myFunction4() {
+			var w = window.outerWidth;
+			var h = window.outerHeight;
+			var txt = "Window size: width=" + w + " , height=" + h;
+
+			document.getElementById("demo").innerHTML = txt;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			//onresize event attached to body element
+			function myFunction4() {
+				var w = window.outerWidth;
+				var h = window.outerHeight;
+				var txt = "Window size: width=" + w + " , height=" + h;
+
+				document.getElementById("demo").innerHTML = txt;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

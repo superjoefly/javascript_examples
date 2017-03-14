@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Object Properties</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>JavaScript Object Properties</h1>
+
+		<p>Object properties are the values associated with a JavaScript object.</p>
+
+		<p>A JavaScript object is a collection of unordered properties.</p>
+
+		<p>Properties can usually be changed, added, and deleted, but some are read only.</p>
+
+		<h2>Accessing Properties</h2>
+
+		<p>Access a property using <b>.property</b>:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		var person = {
+			firstName: "Joe",
+			lastname: "Blow",
+			age: 37,
+			eyeColor: "blue"
+		};
+
+		document.getElementById("demo1").innerHTML =
+		person.eyeColor;
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {
+				firstName: "Joe",
+				lastname: "Blow",
+				age: 37,
+				eyeColor: "blue"
+			};
+
+			document.getElementById("demo1").innerHTML =
+			person.eyeColor;
+		</code></pre>
+
+		<p>Access a property using <b>[property]</b>:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		var person = {
+			firstName: "Joe",
+			lastname: "Blow",
+			age: 37,
+			eyeColor: "blue"
+		};
+
+		document.getElementById("demo2").innerHTML =
+		person["firstName"];
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {
+				firstName: "Joe",
+				lastname: "Blow",
+				age: 37,
+				eyeColor: "blue"
+			};
+
+			document.getElementById("demo2").innerHTML =
+			person["firstName"];
+		</code></pre>
+
+		<hr />
+
+		<h2>for...in</h2>
+
+		<p>Access a property using <b>for...in</b>:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var txt = "";
+		var x;
+		var person = {
+			firstName: "Joe",
+			lastname: "Blow",
+			age: 37,
+			eyeColor: "blue"
+		};
+
+		for (x in person) {
+			txt += person[x] + " ";
+		}
+
+		document.getElementById("demo3").innerHTML = txt;
+		</script>
+
+		<pre><code class="language-javascript">
+			var txt = "";
+			var x;
+			var person = {
+				firstName: "Joe",
+				lastname: "Blow",
+				age: 37,
+				eyeColor: "blue"
+			};
+
+			for (x in person) {
+				txt += person[x] + " ";
+			}
+
+			document.getElementById("demo3").innerHTML = txt;
+		</code></pre>
+
+		<hr />
+
+		<h2>Adding Properties</h2>
+
+		<p>Add new properies to an existing object:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var txt = "";
+		var x;
+		var person = {
+			firstName: "Joe",
+			lastname: "Blow",
+			age: 37,
+			eyeColor: "blue"
+		};
+
+		person.car = "Toyota";
+		person.weight = 233;
+
+		for (x in person) {
+			txt += person[x] + " ";
+		}
+
+		document.getElementById("demo4").innerHTML = txt;
+		</script>
+
+		<pre><code class="language-javascript">
+			var txt = "";
+			var x;
+			var person = {
+				firstName: "Joe",
+				lastname: "Blow",
+				age: 37,
+				eyeColor: "blue"
+			};
+
+			person.car = "Toyota";
+			person.weight = 233;
+
+			for (x in person) {
+				txt += person[x] + " ";
+			}
+
+			document.getElementById("demo4").innerHTML = txt;
+		</code></pre>
+
+		<hr />
+
+		<h2>Deleting Properties</h2>
+
+		<p>Delete properties from an existing object:</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		var txt = "";
+		var x;
+		var person = {
+			firstName: "Joe",
+			lastname: "Blow",
+			age: 37,
+			eyeColor: "blue",
+			car: "Toyota",
+			weight: 233
+		};
+
+		delete person.car;
+		delete person.weight;
+
+		for (x in person) {
+			txt += person[x] + " ";
+		}
+
+		document.getElementById("demo5").innerHTML = txt;
+		</script>
+
+		<pre><code class="language-javascript">
+			var txt = "";
+			var x;
+			var person = {
+				firstName: "Joe",
+				lastname: "Blow",
+				age: 37,
+				eyeColor: "blue",
+				car: "Toyota",
+				weight: 233
+			};
+
+			delete person.car;
+			delete person.weight;
+
+			for (x in person) {
+				txt += person[x] + " ";
+			}
+
+			document.getElementById("demo5").innerHTML = txt;
+		</code></pre>
+
+	</body>
+
+</html>

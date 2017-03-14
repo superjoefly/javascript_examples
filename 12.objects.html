@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Objects</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>Objects</h1>
+
+		<p>Objects are variables, but <b>objects can contain many values</b>. The values are written as <b>name:value</b> pairs (separated by semicolon). JavaScript objects are containers for <b>named values.</b></p>
+
+		<hr />
+
+		<h2>Create a JavaScript Variable</h2>
+
+		<p id="demo1"></p>
+
+		<script>
+		var car = "Audi";
+		document.getElementById("demo1").innerHTML = car;
+		</script>
+
+		<pre><code class="language-javascript">
+			var car = "Audi";
+			document.getElementById("demo1").innerHTML = car;
+		</code></pre>
+
+		<hr />
+
+		<h2>Create a JavaScript Object</h2>
+
+		<p id="demo2"></p>
+
+		<script>
+		var car = {type: "fiat", model: "500", color: "white"};
+		document.getElementById("demo2").innerHTML = car.color;
+		</script>
+
+		<pre><code class="language-javascript">
+			var car = {type: "fiat", model: "500", color: "white"};
+			document.getElementById("demo2").innerHTML = car.color;
+		</code></pre>
+
+		<hr />
+
+		<h2>Create a Person Object (single line)</h2>
+
+		<p id="demo3"></p>
+
+		<script>
+		var person = {firstName:"John", lastName:"Doe", age: 49, eyeColor:"blue"};
+
+		document.getElementById("demo3").innerHTML =
+		person.firstName + " is " + person.age + " years old.";
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {firstName:"John", lastName:"Doe", age: 49, eyeColor:"blue"};
+
+			document.getElementById("demo3").innerHTML =
+			person.firstName + " is " + person.age + " years old.";
+		</code></pre>
+
+		<hr />
+
+		<h2>Create a Person Object (multiple lines)</h2>
+
+		<p id="demo4"></p>
+
+		<script>
+		var person = {
+			firstName: "John",
+			lastName: "Doe",
+			age: 55,
+			eyeColor: "blue"
+		};
+
+		document.getElementById("demo4").innerHTML =
+		person.firstName + " is " + person.age + " years old.";
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {
+				firstName: "John",
+				lastName: "Doe",
+				age: 55,
+				eyeColor: "blue"
+			};
+
+			document.getElementById("demo4").innerHTML =
+			person.firstName + " is " + person.age + " years old.";
+		</code></pre>
+
+		<hr />
+
+		<h2>Accessing Object Properties Using .property</h2>
+
+		<p id="demo5"></p>
+
+		<script>
+		var person = {
+			firstName: "John",
+			lastName: "Doe",
+			age: 45,
+			eyeColor: "blue"
+		};
+
+		document.getElementById("demo5").innerHTML = person.lastName;
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {
+				firstName: "John",
+				lastName: "Doe",
+				age: 45,
+				eyeColor: "blue"
+			};
+
+			document.getElementById("demo5").innerHTML = person.lastName;
+		</code></pre>
+
+		<hr />
+
+		<h2>Accessing Object Properties Using [property]</h2>
+
+		<p id="demo6"></p>
+
+		<script>
+		var car = {
+			carName: "Audi",
+			carColor: "Blue",
+			carStyle: "Sport"
+		};
+
+		document.getElementById("demo6").innerHTML =
+		car["carStyle"];
+		</script>
+
+		<pre><code class="language-javascript">
+			var car = {
+				carName: "Audi",
+				carColor: "Blue",
+				carStyle: "Sport"
+			};
+
+			document.getElementById("demo6").innerHTML =
+			car["carStyle"];
+		</code></pre>
+
+		<hr />
+
+		<h2>Accessing a Function Property as a Method</h2>
+
+		<p id="demo7"></p>
+
+		<script>
+		var person = {
+			firstName: "Joe",
+			lastName: "Atwood",
+			age: 37,
+			eyeColor: "blue",
+			fullName: function() {
+				return this.firstName + " " + this.lastName;
+			}
+		};
+
+		document.getElementById("demo7").innerHTML = person.fullName();
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {
+				firstName: "Joe",
+				lastName: "Atwood",
+				age: 37,
+				eyeColor: "blue",
+				fullName: function() {
+					return this.firstName + " " + this.lastName;
+				}
+			};
+
+			document.getElementById("demo7").innerHTML = person.fullName();
+		</code></pre>
+
+		<hr />
+
+		<h2>Access a Function Property as a Property</h2>
+
+		<p id="demo8"></p>
+
+		<script>
+		var person = {
+			firstName: "Joe",
+			lastName: "Atwood",
+			age: 37,
+			fullName: function() {
+				return this.firstName + " " + this.lastName;
+			}
+		};
+
+		document.getElementById("demo8").innerHTML = person.fullName;
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {
+				firstName: "Joe",
+				lastName: "Atwood",
+				age: 37,
+				fullName: function() {
+					return this.firstName + " " + this.lastName;
+				}
+			};
+
+			document.getElementById("demo8").innerHTML = person.fullName;
+		</code></pre>
+
+	</body>
+
+</html>

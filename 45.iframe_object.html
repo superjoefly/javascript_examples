@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>iFrame Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>iFrame Object</h1>
+
+		<p><strong>The following iframe is used for the examples on this page:</strong></p>
+
+		<iframe id="myframe" src="demo_iframe.html" height="200" width="300" name="myFrame">
+		<p>Your browser does not support iframes.</p>
+		</iframe>
+
+		<h2>Background Color:</h2>
+
+		<p>Change the background color of the document in the iframe:</p>
+
+		<p><strong>Note:</strong> background color of iframe (body) must be initially set to transparent on the demo page to work.</p>
+
+		<!-- <p id="demo"></p> -->
+
+		<button onclick="myFunction1()">Change Color</button>
+
+		<script>
+		function myFunction1() {
+		    var x = document.getElementById("myframe");
+		    x.style.backgroundColor = "blue";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+			    var x = document.getElementById("myframe");
+			    x.style.backgroundColor = "blue";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Height</h2>
+
+		<p>Find the height of an iframe:</p>
+
+		<button onclick="myFunction2()">Get Height</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function myFunction2() {
+			var x = document.getElementById("myframe").height;
+			document.getElementById("demo2").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				var x = document.getElementById("myframe").height;
+				document.getElementById("demo2").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Name</h2>
+
+		<p>Find the value of the name attribute of an iframe:</p>
+
+		<button onclick="myFunction3()">Get Name</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		function myFunction3() {
+			var x = document.getElementById("myframe").name;
+			document.getElementById("demo3").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				var x = document.getElementById("myframe").name;
+				document.getElementById("demo3").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Get Source</h2>
+
+		<p>Find the source attribute of an iframe:</p>
+
+		<button onclick="myFunction4()">Get Source</button>
+
+		<p id="demo4"></p>
+
+		<script>
+		function myFunction4() {
+			var x = document.getElementById("myframe").src;
+			document.getElementById("demo4").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction4() {
+				var x = document.getElementById("myframe").src;
+				document.getElementById("demo4").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Change Source</h2>
+
+		<p>Change the source attribute of an iframe:</p>
+
+		<button onclick="myFunction5()">Change Source</button>
+
+		<script>
+		function myFunction5() {
+			document.getElementById("myframe").src="http://www.bing.com";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction5() {
+				document.getElementById("myframe").src="http://www.bing.com";
+			}
+		</code></pre>
+		
+	</body>
+
+</html>

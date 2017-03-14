@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Document Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+	<h1>Document Object Model</h1>
+
+	<p>When a webpage is loaded, the browser creates a Document Object Model of the page.</p>
+
+	<p>The <b>HTML DOM</b> model is constructed as a tree of <b>Objects</b>:</p>
+
+	<h2>The HTML DOM Tree of Objects</h2>
+
+	<img src="images/dom.gif" alt="Document Object Model" />
+
+	<p>With the object model, JavaScript gets the power it needs to create dynamic HTML:</p>
+
+	<ul>
+		<li>Change HTML elements</li>
+		<li>Change HTML attributes</li>
+		<li>Change CSS styles</li>
+		<li>Remove existing HTML elements and attributes</li>
+		<li>Add new HTML elements and attributes</li>
+		<li>React to HTML events</li>
+		<li>Create new events</li>
+	</ul>
+
+	<hr />
+
+	<h2>HTML DOM</h2>
+
+	<p>the HTML DOM is a standard <b>object</b> model for programming interface for HTML. It defines:</p>
+
+	<ul>
+		<li>HTML elements as objects</li>
+		<li>Properties of HTML elements</li>
+		<li>Methods to access HTML elements</li>
+		<li>Events for HTML elements</li>
+	</ul>
+
+	<p>The HTML DOM is a standard for how to get, change, add, or delete HTML elements.</p>
+
+	<hr />
+
+	<h2>Cookies</h2>
+
+	<p>Display the name/value pairs of cookies in a document:</p>
+
+	<p id="demo1"></p>
+
+	<button onclick="myFunction1()">Get Cookies</button>
+
+	<script>
+	function myFunction1() {
+		document.getElementById("demo1").innerHTML =
+		"Cookies associated with this document: " + document.cookie;
+	}
+	</script>
+
+	<pre><code class="language-javascript">
+		function myFunction1() {
+			document.getElementById("demo1").innerHTML =
+			"Cookies associated with this document: " + document.cookie;
+		}
+	</code></pre>
+
+	<hr />
+
+	<h2>Domain Name</h2>
+
+	<p>Display the domain name of the server that loaded the document:</p>
+
+	<p id="demo2"></p>
+
+	<button onclick="myFunction2()">Get Domain</button>
+
+	<script>
+	function myFunction2() {
+		document.getElementById("demo2").innerHTML = document.domain;
+	}
+	</script>
+
+	<pre><code class="language-javascript">
+		function myFunction2() {
+			document.getElementById("demo2").innerHTML = document.domain;
+		}
+	</code></pre>
+
+	<hr />
+
+	<h2>Time and Date</h2>
+
+	<p>Display the time and date the document was last modified:</p>
+
+	<p id="demo3"></p>
+
+	<script>
+	document.getElementById("demo3").innerHTML = document.lastModified;
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo3").innerHTML = document.lastModified;
+	</code></pre>
+
+	<hr />
+
+	<h2>URL</h2>
+
+	<p>Display the URL of the document that loaded the current document:</p>
+
+	<p id="demo4"></p>
+
+	<button onclick="myFunction3()">Get URL</button>
+
+	<script>
+	function myFunction3() {
+		document.getElementById("demo4").innerHTML = document.referrer;
+	}
+	</script>
+
+	<pre><code class="language-javascript">
+		function myFunction3() {
+			document.getElementById("demo4").innerHTML = document.referrer;
+		}
+	</code></pre>
+
+	<hr />
+
+	<h2>Title</h2>
+
+	<p>Display the title of a document:</p>
+
+	<p id="demo5"></p>
+
+	<script>
+	document.getElementById("demo5").innerHTML = document.title;
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo5").innerHTML = document.title;
+	</code></pre>
+
+	<hr />
+
+	<h2>Full URL</h2>
+
+	<p>Display the full URL of a document:</p>
+
+	<p id="demo6"></p>
+
+	<script>
+	document.getElementById("demo6").innerHTML = document.URL;
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo6").innerHTML = document.URL;
+	</code></pre>
+
+	<hr />
+
+	<h2>Content</h2>
+
+	<p>Replace the content of a document:</p>
+
+	<p id="demo7">Click the button to replace the content of this document!</p>
+
+	<button onclick="myFunction4()">Replace Content</button>
+
+	<script>
+	function myFunction4() {
+		document.open("text/html","replace");
+			document.write("<h2>This is pretty cool!!!</h2>" + " " + "Refresh to return to examples!");
+			document.close();
+	}
+	</script>
+
+	<pre><code class="language-javascript">
+		function myFunction4() {
+			document.open("text/html","replace");
+				document.write("<h2>This is pretty cool!!!</h2>" + " " + "Refresh to return to examples!");
+				document.close();
+		}
+	</code></pre>
+
+	<hr />
+
+	<h2>New Window</h2>
+
+	<p>Open a new window and add some content:</p>
+
+	<button onclick="myFunction5()">New Window!</button>
+
+	<script>
+	function myFunction5() {
+		var w = window.open();
+		w.document.open();
+		w.document.write("<h1>This is a new document!</h1>");
+		w.document.close();
+	}
+	</script>
+
+	<pre><code class="language-javascript">
+		function myFunction5() {
+			var w = window.open();
+			w.document.open();
+			w.document.write("<h1>This is a new document!</h1>");
+			w.document.close();
+		}
+	</code></pre>
+
+	<hr />
+
+	<h2>Name</h2>
+
+	<p>Display the number of elements with a specific name property:</p>
+
+	<p id="demo8"></p>
+
+	<button onclick="myFunction6()">Get Number!</button>
+
+	<p>
+		Cats: <input name="x" type="checkbox" value="Cats" />
+		Dogs: <input name="x" type="checkbox" value="Dogs" />
+	</p>
+
+	<script>
+	function myFunction6() {
+		var x = document.getElementsByName("x");
+		document.getElementById("demo8").innerHTML = x.length;
+	}
+	</script>
+
+	<pre><code class="language-javascript">
+		function myFunction6() {
+			var x = document.getElementsByName("x");
+			document.getElementById("demo8").innerHTML = x.length;
+		}
+	</code></pre>
+
+	<hr />
+
+	<h2>Tag Name</h2>
+
+	<p>Display the number of elements with a specific tag name (div):</p>
+
+	<p id="demo9"></p>
+
+	<button onclick="myFunction7()">Get Number</button>
+
+	<div>This is a div!</div>
+	<div>This is a div!</div>
+
+	<script>
+	function myFunction7() {
+		var x = document.getElementsByTagName("div");
+		document.getElementById("demo9").innerHTML = x.length;
+	}
+	</script>
+
+	<pre><code class="language-javascript">
+		function myFunction7() {
+			var x = document.getElementsByTagName("div");
+			document.getElementById("demo9").innerHTML = x.length;
+		}
+	</code></pre>
+
+	</body>
+
+</html>

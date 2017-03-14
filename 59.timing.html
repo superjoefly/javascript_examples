@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Timing</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Timing Events</h1>
+
+		<p>The window object allows execution of code at specified time intervals. These timing intervals are called timing events.</p>
+
+		<p>The two key methods to use with JavaScript are:</p>
+
+		<ul>
+			<li>setTimeout(function, milliseconds)</li>
+			<li>setInterval(function, milliseconds)</li>
+		</ul>
+
+		<div class="w3-panel w3-border-red w3-leftbar w3-pale-blue">
+			<p>The setTimeout() and setInterval() are both methods of the HTML DOM Window object.</p>
+		</div>
+
+		<h2>Timed Alert</h2>
+
+		<p>Set a timeout for an alert (3 seconds):</p>
+
+		<button onclick="setTimeout(myFunction1, 3000)">Set Alert</button>
+
+		<script>
+		function myFunction1() {
+			alert("Hello There!");
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				alert("Hello There!");
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Timed Text</h2>
+
+		<p>Display the number of seconds past at 2, 4, and 6 seconds:</p>
+
+		<p id="demo2"></p>
+
+		<button onclick="dispSeconds()">Display Seconds</button>
+
+		<script>
+		function dispSeconds() {
+			setTimeout(myTime1, 2000)
+			setTimeout(myTime2, 4000)
+			setTimeout(myTime3, 6000)
+		}
+
+		function myTime1() {
+			document.getElementById("demo2").innerHTML = "2 seconds";
+		}
+		function myTime2() {
+			document.getElementById("demo2").innerHTML = "4 seconds";
+		}
+		function myTime3() {
+			document.getElementById("demo2").innerHTML = "6 seconds";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function dispSeconds() {
+				setTimeout(myTime1, 2000)
+				setTimeout(myTime2, 4000)
+				setTimeout(myTime3, 6000)
+			}
+
+			function myTime1() {
+				document.getElementById("demo2").innerHTML = "2 seconds";
+			}
+			function myTime2() {
+				document.getElementById("demo2").innerHTML = "4 seconds";
+			}
+			function myTime3() {
+				document.getElementById("demo2").innerHTML = "6 seconds";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Continuous Timer</h2>
+
+		<p>Display a timer that runs "forever":</p>
+
+		<button onclick="setInterval(myCounter, 1000)">Start Time</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		var s = 0;
+		function myCounter() {
+			document.getElementById("demo3").innerHTML = ++s;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var s = 0;
+			function myCounter() {
+				document.getElementById("demo3").innerHTML = ++s;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Continuous Timer with Stop Button</h2>
+
+		<p>Display a timer with a start and stop button:</p>
+
+		<button onclick="myTimer = setInterval(myCounter2, 1000)">Start</button>
+
+		<p id="demo4"></p>
+
+		<button onclick="clearInterval(myTimer)">Stop</button>
+
+		<script>
+		var c = 0;
+		function myCounter2() {
+			document.getElementById("demo4").innerHTML = ++c;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			var c = 0;
+			function myCounter2() {
+				document.getElementById("demo4").innerHTML = ++c;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Clock</h2>
+
+		<p>Create a clock using a timing event:</p>
+
+		<button onclick="startTime()">Start Clock</button>
+
+		<p id="demo5"></p>
+
+		<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+
+		document.getElementById("demo5").innerHTML =
+		h + ":" + m + ":" + s;
+
+		var t = setTimeout(startTime, 500);
+		}
+
+		function checkTime(i) {
+			//add zeros in front of numbers less than 10
+			if (i < 10) {
+				i = "0" + i
+			};
+				return i;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function startTime() {
+				var today = new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+
+			document.getElementById("demo5").innerHTML =
+			h + ":" + m + ":" + s;
+
+			var t = setTimeout(startTime, 500);
+			}
+
+			function checkTime(i) {
+				//add zeros in front of numbers less than 10
+				if (i < 10) {
+					i = "0" + i
+				};
+					return i;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

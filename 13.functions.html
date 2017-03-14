@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Functions</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>Functions</h1>
+
+		<p>A JavaScript function is a block of code designed to perform a particular task.</p>
+
+		<p>A JavaScript function is executed when "something" invokes (calls) it.</p>
+
+		<hr />
+
+		<h2>A Simple Function</h2>
+
+		<p id="demo1"></p>
+
+		<button type="button" onclick="myFunction()">Click Me!</button>
+
+		<script>
+		function myFunction() {
+			document.getElementById("demo1").innerHTML =
+			"Hello World!";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction() {
+				document.getElementById("demo1").innerHTML =
+				"Hello World!";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>A Function With an Argument</h2>
+
+		<p id="demo2"></p>
+
+		<button type="button" onclick="myFunction2('Joey Atwood', 'WebDev')">Click Me!</button>
+
+		<script>
+		function myFunction2(name, job) {
+			document.getElementById("demo2").innerHTML =
+			"Welcome " + name + ", the " + job + ".";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2(name, job) {
+				document.getElementById("demo2").innerHTML =
+				"Welcome " + name + ", the " + job + ".";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>A Function With an Argument 2</h2>
+
+		<p><strong>When you click on one of the buttons, a function will be called. The function will display the argument that is passed to it.</strong></p>
+
+		<p id="demo3"></p>
+
+		<form>
+			<input type="button" onclick="myFunction3('Good Morning!')" value="In the Morning" />
+			<input type="button" onclick="myFunction3('Good Evening!')" value="In the Evening" />
+		</form>
+
+		<script>
+		function myFunction3(txt) {
+			document.getElementById("demo3").innerHTML = txt;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3(txt) {
+				document.getElementById("demo3").innerHTML = txt;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>A Function That Returns a Value</h2>
+
+		<p id="demo4"></p>
+
+		<script>
+		function myFunction4(a,b) {
+			return a * b;
+		}
+
+		document.getElementById("demo4").innerHTML =
+		myFunction4(5,3);
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction4(a,b) {
+				return a * b;
+			}
+
+			document.getElementById("demo4").innerHTML =
+			myFunction4(5,3);
+		</code></pre>
+
+		<hr />
+
+		<h2>Convert Fahrenheit to Celsius</h2>
+
+		<p id="demo7"></p>
+
+		<script>
+		function toCel(f) {
+			return (f-32) * (5/9);
+		}
+
+		document.getElementById("demo7").innerHTML =
+		toCel(100);
+		</script>
+
+		<pre><code class="language-javascript">
+			function toCel(f) {
+				return (f-32) * (5/9);
+			}
+
+			document.getElementById("demo7").innerHTML =
+			toCel(100);
+		</code></pre>
+
+		<hr />
+
+		<h2>Convert Fahrenheit to Celsius (onclick)</h2>
+
+		<button type="button" onclick="toCelsius()">Convert!</button>
+
+		<input type="text" id="input" /> <!--input-->
+
+		<p id="demo5"></p>	<!--output-->
+
+		<script>
+		function toCelsius() {
+
+			var far = document.getElementById("input").value;
+			var cel;
+
+			if(far != '') {
+				cel = (far - 32) * 5/9;
+				document.getElementById("demo5").innerHTML = cel;
+			}
+			else {
+				document.getElementById("demo5").innerHTML = "Please Enter a Number!";
+			}
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function toCelsius() {
+
+				var far = document.getElementById("input").value;
+				var cel;
+
+				if(far != '') {
+					cel = (far - 32) * 5/9;
+					document.getElementById("demo5").innerHTML = cel;
+				}
+				else {
+					document.getElementById("demo5").innerHTML = "Please Enter a Number!";
+				}
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>A Function Call Without ()</h2>
+
+		<p>Accessing a function without (), will return the function definition:</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		function toCelsius(f) {
+			return (5/9) * (f-32);
+		}
+
+		document.getElementById("demo6").innerHTML = toCelsius;
+		</script>
+
+		<pre><code class="language-javascript">
+			function toCelsius(f) {
+				return (5/9) * (f-32);
+			}
+
+			document.getElementById("demo6").innerHTML = toCelsius;
+		</code></pre>
+
+	</body>
+
+</html>

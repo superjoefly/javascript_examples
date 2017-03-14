@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Objects</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>JavaScript Objects</h1>
+
+		<p>In JavaScript, almost "everything" is an object:</p>
+
+		<ul>
+			<li>Booleans can be objects if defined with the new keyword.</li>
+			<li>Numbers can be objects if defined with the new keyword.</li>
+			<li>Strings can be objects if defined with the new keyword.</li>
+			<li>Dates are always objects.</li>
+			<li>Maths are always objects.</li>
+			<li>Regular expressions are always objects.</li>
+			<li>Arrays are always objects.</li>
+			<li>Functions are always objects.</li>
+			<li>Objects are always objects.</li>
+		</ul>
+
+		<p>All Javascript values, except primitives, are objects.</p>
+
+		<hr />
+
+		<h2>JavaScript Primitives</h2>
+
+		<p>A primitive value is a value that has no properties or methods.</p>
+
+		<p>A primitive data type is data that has a primitive value.</p>
+
+		<p>The 5 types of primitive values are:</p>
+
+		<ul>
+			<li>string</li>
+			<li>number</li>
+			<li>boolean</li>
+			<li>null</li>
+			<li>undefined</li>
+		</ul>
+
+		<p>Primitive values are immutable (they are hardcoded and therefore cannot be changed).</p>
+
+		<hr />
+
+		<h2>Variables</h2>
+
+		<p>Create a JavaScript variable:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		var person = "Joe Blow";
+		document.getElementById("demo1").innerHTML = person;
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = "Joe Blow";
+			document.getElementById("demo1").innerHTML = person;
+		</code></pre>
+
+		<hr />
+
+		<h2>Create Object</h2>
+
+		<p>Create a JavaScript object:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		var person = {
+			firstName: "Joe",
+			lastName: "Blow",
+			age: 37,
+			eyeColor: "blue"
+		};
+
+		document.getElementById("demo2").innerHTML = person.eyeColor;
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {
+				firstName: "Joe",
+				lastName: "Blow",
+				age: 37,
+				eyeColor: "blue"
+			};
+
+			document.getElementById("demo2").innerHTML = person.eyeColor;
+		</code></pre>
+
+		<hr />
+
+		<h2>Single Line Object</h2>
+
+		<p>Create a JavaScript object on a single line:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var person = {firstName: "Joe", lastName: "Blow", age: 37, eyeColor: "blue"};
+
+		document.getElementById("demo3").innerHTML = person.firstName + " " + person.lastName;
+		</script>
+
+		<pre><code class="language-javascript">
+			var person = {firstName: "Joe", lastName: "Blow", age: 37, eyeColor: "blue"};
+
+			document.getElementById("demo3").innerHTML = person.firstName + " " + person.lastName;
+		</code></pre>
+
+		<hr />
+
+		<h2>Multi Line Object</h2>
+
+		<p>Create a JavaScript object on multiple lines:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var car = {
+			make: "Toyota",
+			model: "Tacoma",
+			color: "white",
+			year: 1999
+		};
+
+		document.getElementById("demo4").innerHTML =
+		"Joey has a " + car.color + " " + car.make;
+		</script>
+
+		<pre><code class="language-javascript">
+			var car = {
+				make: "Toyota",
+				model: "Tacoma",
+				color: "white",
+				year: 1999
+			};
+
+			document.getElementById("demo4").innerHTML =
+			"Joey has a " + car.color + " " + car.make;
+		</code></pre>
+
+		<hr />
+
+		<h2>Object Using New</h2>
+
+		<p>Create a JavaScript object using <b>new</b>:</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		var car = new Object();
+		car.make = "Toyota";
+		car.model = "Tacoma";
+		car.color = "white";
+		car.year = 1999;
+
+		document.getElementById("demo5").innerHTML =
+		"The truck is a " + car.year + " " + car.model;
+		</script>
+
+		<pre><code class="language-javascript">
+			var car = new Object();
+			car.make = "Toyota";
+			car.model = "Tacoma";
+			car.color = "white";
+			car.year = 1999;
+
+			document.getElementById("demo5").innerHTML =
+			"The truck is a " + car.year + " " + car.model;
+		</code></pre>
+
+		<hr />
+
+		<h2>Object Using Constructor</h2>
+
+		<p>Create a JavaScript object using a constructor:</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		function person(first, last, age, eye) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = age;
+			this.eyeColor = eye;
+		}
+
+		var myFriend = new person("Bill", "Davis", 57, "brown");
+
+		document.getElementById("demo6").innerHTML =
+		"My friend " + myFriend.firstName + " is " + myFriend.age + " years old.";
+		</script>
+
+		<pre><code class="language-javascript">
+			function person(first, last, age, eye) {
+				this.firstName = first;
+				this.lastName = last;
+				this.age = age;
+				this.eyeColor = eye;
+			}
+
+			var myFriend = new person("Bill", "Davis", 57, "brown");
+
+			document.getElementById("demo6").innerHTML =
+			"My friend " + myFriend.firstName + " is " + myFriend.age + " years old.";
+		</code></pre>
+
+		<hr />
+
+		<h2>Built In Objects</h2>
+
+		<p>Create built in JavaScript objects:</p>
+
+		<p id="demo7"></p>
+
+		<script>
+		var x1 = new Object();
+		var x2 = new Function();
+		var x3 = new Date();
+
+		document.getElementById("demo7").innerHTML =
+		"x1:" + typeof x1 + "<br />" +
+		"x2:" + typeof x2 + "<br />" +
+		"x3:" + typeof x3;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x1 = new Object();
+			var x2 = new Function();
+			var x3 = new Date();
+
+			document.getElementById("demo7").innerHTML =
+			"x1:" + typeof x1 + "<br />" +
+			"x2:" + typeof x2 + "<br />" +
+			"x3:" + typeof x3;
+
+			//add line breaks!
+		</code></pre>
+
+		<p>There is no need to use <b>new</b> on String(), Number(), Boolean(), Array(), and RegExp().</p>
+
+		<hr />
+
+		<h2>Creating JavaScript Variables</h2>
+
+		<p>It is best to create JavaScript variables together at the beginning of the script:</p>
+
+		<p id="demo8"></p>
+
+		<script>
+		var x = 5, y = 7, z = (x + y);
+		document.getElementById("demo8").innerHTML = z;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 5, y = 7, z = (x + y);
+			document.getElementById("demo8").innerHTML = z;
+		</code></pre>
+
+		<hr />
+
+		<h2>Mutability</h2>
+
+		<p>JavaScript objects are mutable...any changes to a copy of an object will also affect the original:</p>
+
+		<p id="demo9"></p>
+
+		<p id="demo10"></p>
+
+		<script>
+		var car = {
+			make: "Toyota",
+			model: "Tacoma",
+			year: 1999,
+			color: "white"
+		};
+
+		document.getElementById("demo9").innerHTML =
+		car.year;
+
+		car.year = 2001;
+
+		document.getElementById("demo10").innerHTML =
+		car.year;
+		</script>
+
+		<pre><code class="language-javascript">
+			var car = {
+				make: "Toyota",
+				model: "Tacoma",
+				year: 1999,
+				color: "white"
+			};
+
+			document.getElementById("demo9").innerHTML =
+			car.year;
+
+			car.year = 2001;
+
+			document.getElementById("demo10").innerHTML =
+			car.year;
+		</code></pre>
+
+	</body>
+
+</html>

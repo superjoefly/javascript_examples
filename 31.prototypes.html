@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Object Prototypes</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Object Prototypes</h1>
+
+		<p>Every JavaScript object has a prototype. The prototype is also an object.</p>
+
+		<p>All JavaScript objects inherit their properties and methods from their prototype.</p>
+
+		<hr />
+
+		<h2>Creating a Prototype</h2>
+
+		<p>Use an object constructor function to create a prototype:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		function Friend(firstName, lastName, age, eyeColor) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.age = age;
+			this.eyeColor = eyeColor;
+		}
+
+		var myFriend = new Friend("Bob", "Hanks", 57, "brown");
+
+		document.getElementById("demo1").innerHTML = myFriend.lastName;
+		</script>
+
+		<pre><code class="language-javascript" contenteditable>
+			function Friend(firstName, lastName, age, eyeColor) {
+				this.firstName = firstName;
+				this.lastName = lastName;
+				this.age = age;
+				this.eyeColor = eyeColor;
+			}
+
+			var myFriend = new Friend("Bob", "Hanks", 57, "brown");
+
+			document.getElementById("demo1").innerHTML = myFriend.lastName;
+		</code></pre>
+
+		<p>The constructor function is the prototype for Friend objects.</p>
+
+		<p>It is considered good practice to name constructor functions with an upper-case letter.</p>
+
+		<hr />
+
+		<h2>Adding Properties</h2>
+
+		<p>To add a new property to a prototype, you must add it to the constructor function:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		function Friend (firstName, lastName, age, eyeColor) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.age = age;
+			this.eyeColor = eyeColor;
+			this.nationality = "English";
+		}
+
+		var myFriend = new Friend("Jerry", "Jackson", 48, "green");
+
+		document.getElementById("demo2").innerHTML = myFriend.nationality;
+		</script>
+
+		<pre><code class="language-javascript">
+			function Friend (firstName, lastName, age, eyeColor) {
+				this.firstName = firstName;
+				this.lastName = lastName;
+				this.age = age;
+				this.eyeColor = eyeColor;
+				this.nationality = "English";
+			}
+
+			var myFriend = new Friend("Jerry", "Jackson", 48, "green");
+
+			document.getElementById("demo2").innerHTML = myFriend.nationality;
+		</code></pre>
+
+		<hr />
+
+		<h2>Adding Methods</h2>
+
+		<p>A constructor function can also define methods:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		function Friend (firstName, lastName, age, eyeColor) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.age = age;
+			this.eyeColor = eyeColor;
+			this.fullName = function() {
+				return this.firstName + " " + this.lastName
+			};
+		}
+		var myFriend = new Friend("Jack", "Bell", 50, "blue");
+		document.getElementById("demo3").innerHTML = myFriend.fullName();
+		</script>
+
+		<pre><code class="language-javascript">
+			function Friend (firstName, lastName, age, eyeColor) {
+				this.firstName = firstName;
+				this.lastName = lastName;
+				this.age = age;
+				this.eyeColor = eyeColor;
+				this.fullName = function() {
+					return this.firstName + " " + this.lastName
+				};
+			}
+			var myFriend = new Friend("Jack", "Bell", 50, "blue");
+			document.getElementById("demo3").innerHTML = myFriend.fullName();
+		</code></pre>
+
+		<hr />
+
+		<h2>Prototype Property</h2>
+
+		<p>Add new properties to an existing prototype:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		function Friend(first, last, age, eye) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = age;
+			this.eyeColor = eye;
+		}
+		Friend.prototype.nationality = "English";
+
+		var myFriend = new Friend("John", "Henry", 48, "grey");
+
+		document.getElementById("demo4").innerHTML = myFriend.eyeColor;
+		</script>
+
+		<pre><code class="language-javascript">
+			function Friend(first, last, age, eye) {
+				this.firstName = first;
+				this.lastName = last;
+				this.age = age;
+				this.eyeColor = eye;
+			}
+			Friend.prototype.nationality = "English";
+
+			var myFriend = new Friend("John", "Henry", 48, "grey");
+
+			document.getElementById("demo4").innerHTML = myFriend.eyeColor;
+		</code></pre>
+
+		<hr />
+
+		<p>Add new methods to existing prototype:</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		function Friend(first, last, age, eye) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = age;
+			this.eyeColor = eye;
+		}
+		Friend.prototype.fullName = function() {
+			return this.firstName + " " + this.lastName
+		};
+
+		var myFriend = new Friend("Hank", "Williams", 55, "brown");
+
+		document.getElementById("demo5").innerHTML = myFriend.fullName();
+		</script>
+
+		<pre><code class="language-javascript">
+			function Friend(first, last, age, eye) {
+				this.firstName = first;
+				this.lastName = last;
+				this.age = age;
+				this.eyeColor = eye;
+			}
+			Friend.prototype.fullName = function() {
+				return this.firstName + " " + this.lastName
+			};
+
+			var myFriend = new Friend("Hank", "Williams", 55, "brown");
+
+			document.getElementById("demo5").innerHTML = myFriend.fullName();
+		</code></pre>
+
+	</body>
+
+</html>

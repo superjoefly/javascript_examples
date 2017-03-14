@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Mouse Events</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Mouse Events</h1>
+
+		<h2>onmouseover/oumouseout (change color)</h2>
+
+		<p>Change the color of an element when the mouse moves over it, and change it back when the mouse moves away:</p>
+
+		<h3 id="txt1" onmouseover="myFunction1()" onmouseout="myFunction2()">Mouse Over Me!</h3>
+
+		<script>
+		function myFunction1() {
+			document.getElementById("txt1").style.color="lime";
+		}
+		function myFunction2() {
+			document.getElementById("txt1").style.color="black";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				document.getElementById("txt1").style.color="lime";
+			}
+			function myFunction2() {
+				document.getElementById("txt1").style.color="black";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onmousedown/onmouseup (change color)</h2>
+
+		<p>Change the color of text when the mouse is over the text and pressed, and then change the color again when the mouse us released:</p>
+
+		<p id="txt2" onmousedown="myFunction3()" onmouseup="myFunction4()">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+
+		<script>
+		function myFunction3() {
+			document.getElementById("txt2").style.color="lime";
+		}
+		function myFunction4() {
+			document.getElementById("txt2").style.color="blue";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				document.getElementById("txt2").style.color="lime";
+			}
+			function myFunction4() {
+				document.getElementById("txt2").style.color="blue";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onmousemove/onmouseout (display coordinates)</h2>
+
+		<p>Display the coordinates of the mouse in a div while moving the mouse, and clear the cooridinates when the mouse leaves the div:</p>
+
+		<div id="coordiv" style="width: 200px; height: 150px; border: 2px solid blue;" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+
+		<p id="demo3"></p>
+
+		<script>
+		function myFunction(e) {
+			x = e.clientX;
+			y = e.clientY;
+			coor = "Coordinates: (" + x + "," + y + ")";
+
+			document.getElementById("demo3").innerHTML = coor;
+		}
+
+		function clearCoor() {
+			document.getElementById("demo3").innerHTML = "";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction(e) {
+				x = e.clientX;
+				y = e.clientY;
+				coor = "Coordinates: (" + x + "," + y + ")";
+
+				document.getElementById("demo3").innerHTML = coor;
+			}
+
+			function clearCoor() {
+				document.getElementById("demo3").innerHTML = "";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>onmouseover/onmouseout (change size)</h2>
+
+		<p>Change the size of an image when the mouse moves over it, and change back to original size when the mouse moves off (out) of it:</p>
+
+		<img src="images/pic_bulbon.gif" alt="light bulb" height="100" width="75" onmouseover="bigImg(this)" onmouseout="normalImg(this)" />
+
+		<script>
+		function bigImg(x) {
+			x.style.height="150px";
+			x.style.width="100px";
+		}
+
+		function normalImg(x) {
+			x.style.height="100px";
+			x.style.width="75px";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function bigImg(x) {
+				x.style.height="150px";
+				x.style.width="100px";
+			}
+
+			function normalImg(x) {
+				x.style.height="100px";
+				x.style.width="75px";
+			}
+		</code></pre>
+
+	</body>
+
+</html>

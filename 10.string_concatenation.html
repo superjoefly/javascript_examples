@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>String Concatenation</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>String Concatenation</h1>
+
+		<p>When used on strings, the + operator is called the concatenation operator.</p>
+
+		<hr />
+
+		<h2>Adding Strings Together (concatenation)</h2>
+
+		<p id="demo1"></p>
+
+		<script>
+		var txt1 = "Hello there...";
+		var txt2 = "How are you today?";
+		document.getElementById("demo1").innerHTML = txt1 + txt2;
+		</script>
+
+		<pre><code class="language-javascript">
+			var txt1 = "Hello there...";
+			var txt2 = "How are you today?";
+			document.getElementById("demo1").innerHTML = txt1 + txt2;
+		</code></pre>
+
+		<hr />
+
+		<h2>Adding strings with space in first string</h2>
+
+		<p id="demo2"></p>
+
+		<script>
+		var txt1 = "Hey there, Joe, ";
+		var txt2 = "whatcha been up to?";
+		document.getElementById("demo2").innerHTML = txt1 + txt2;
+		</script>
+
+		<pre><code class="language-javascript">
+			var txt1 = "Hey there, Joe, ";
+			var txt2 = "whatcha been up to?";
+			document.getElementById("demo2").innerHTML = txt1 + txt2;
+		</code></pre>
+
+		<hr />
+
+		<h2>Adding two string together with a space in-between</h2>
+
+		<p id="demo3"></p>
+
+		<script>
+		var txt1 = "Oh, my gosh";
+		var txt2 = "look at her butt!";
+		document.getElementById("demo3").innerHTML =
+		txt1 + " " + txt2;
+		</script>
+
+		<pre><code class="language-javascript">
+			var txt1 = "Oh, my gosh";
+			var txt2 = "look at her butt!";
+			document.getElementById("demo3").innerHTML =
+			txt1 + " " + txt2;
+		</code></pre>
+
+		<hr />
+
+		<h2>Adding two strings together using the += operator</h2>
+
+		<p id="demo4"></p>
+
+		<script>
+		var txt1 = "Today is a good day";
+		var txt = txt1 += " and I'm going to enjoy it!";
+		document.getElementById("demo4").innerHTML = txt;
+		</script>
+
+		<pre><code class="language-javascript">
+			var txt1 = "Today is a good day";
+			var txt = txt1 += " and I'm going to enjoy it!";
+			document.getElementById("demo4").innerHTML = txt;
+		</code></pre>
+
+		<hr />
+
+		<h2>Adding a number and a string together returns a string.</h2>
+
+		<p id="demo5"></p>
+
+		<script>
+		var x = 5 + 5;
+		var y = "5" + 5;
+		var z = "Hello" + 5;
+
+		document.getElementById("demo5").innerHTML =
+		x + "<br />" + y + "<br />" + z;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 5 + 5;
+			var y = "5" + 5;
+			var z = "Hello" + 5;
+
+			document.getElementById("demo5").innerHTML =
+			x + y + z; //add line breaks
+		</code></pre>
+
+	</body>
+
+</html>

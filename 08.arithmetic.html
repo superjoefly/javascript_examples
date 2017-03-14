@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Arithmetic</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Arithmetic</h1>
+
+		<p>Arithmetic operators are used to perform arithmetic on numbers.</p>
+
+		<h2>Addition (+)</h2>
+
+		<p>Add numbers (variables) together:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		var x = 5;
+		var y = 9;
+		var z = x + y;
+
+		document.getElementById("demo1").innerHTML = z;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 5;
+			var y = 9;
+			var z = x + y;
+
+			document.getElementById("demo1").innerHTML = z;
+		</code></pre>
+
+		<hr />
+
+		<h2>Subtraction (-)</h2>
+
+		<p>Subtract numbers (variables) from each other:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		var x = 32, y = 10;
+		document.getElementById("demo2").innerHTML = x - y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 32, y = 10;
+			document.getElementById("demo2").innerHTML = x - y;
+		</code></pre>
+
+		<hr />
+
+		<h2>Multiplication (*)</h2>
+
+		<p>Multiply numbers:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var x = 5, y = 10;
+		document.getElementById("demo3").innerHTML = x * y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 5, y = 10;
+			document.getElementById("demo3").innerHTML = x * y;
+		</code></pre>
+
+		<hr />
+
+		<h2>Division (/)</h2>
+
+		<p>Divide numbers:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var x = 10, y = 5;
+		document.getElementById("demo4").innerHTML = x / y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 10, y = 5;
+			document.getElementById("demo4").innerHTML = x / y;
+			</script>
+		</code></pre>
+
+		<hr />
+
+		<h2>Modulus (remainder) (%)</h2>
+
+		<p>Get the remainder of division:</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		var x = 25, y = 10;
+		document.getElementById("demo5").innerHTML = x % y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 25, y = 10;
+			document.getElementById("demo5").innerHTML = x % y;
+			</script>
+		</code></pre>
+
+		<hr />
+
+		<h2>Increment (++)</h2>
+
+		<p>Increment a number:</p>
+
+		<p>x incremented and then assigned to y (y = ++x)...result of y is 11</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		var x = 10;
+		var y = ++x;
+		document.getElementById("demo6").innerHTML = y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 10;
+			var y = ++x;
+			document.getElementById("demo6").innerHTML = y;
+		</code></pre>
+
+		<p>x assigned to y, and then incrementd (y = x++)..result of y is 10</p>
+
+		<p id="demo7"></p>
+
+		<p>x assigned to y, and then x incremented (y = x++)...result of x is 10</p>
+
+		<p id="demo8"></p>
+
+		<script>
+		var x = 10;
+		var y = x++;
+		document.getElementById("demo7").innerHTML = y;
+		document.getElementById("demo8").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var x = 10;
+			var y = x++;
+			document.getElementById("demo7").innerHTML = y;
+			document.getElementById("demo8").innerHTML = x;
+		</code></pre>
+
+		<hr />
+
+		<h2>Decrement</h2>
+
+		<p>In this example, y is decremented <b>before</b> it is assigned to x (pre-decremented):</p>
+
+		<p id="demo9"></p>
+
+		<script>
+		var y = 5;
+		var x = --y;
+		document.getElementById("demo9").innerHTML = x;
+		</script>
+
+		<pre><code class="language-javascript">
+			var y = 5;
+			var x = --y;
+			document.getElementById("demo9").innerHTML = x;
+		</code></pre>
+
+		<p>In this example, y is decremented <b>after</b> it is assigned to x (post-decremented):</p>
+
+		<p id="demo10"></p>
+
+		<p>The result of y becomes 4:</p>
+
+		<p id="demo11"></p>
+
+
+		<script>
+		var y = 5;
+		var x = y--;
+
+		document.getElementById("demo10").innerHTML = x;
+		document.getElementById("demo11").innerHTML = y;
+		</script>
+
+		<pre><code class="language-javascript">
+			var y = 5;
+			var x = y--;
+
+			document.getElementById("demo10").innerHTML = x;
+			document.getElementById("demo11").innerHTML = y;
+		</code></pre>
+
+
+	</body>
+
+</html>

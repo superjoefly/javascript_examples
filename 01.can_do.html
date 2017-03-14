@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Can Do</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+		<h1>JavaScript Can Do</h1>
+
+		<p>This page contains some examples of what JavaScript can do.</p>
+
+		<p>JavaScript can change HTML content.</p>
+
+		<h3>Example: change text in paragraph</h3>
+
+		<p id="demo1">JavaScript can change the text in this paragraph.</p>
+
+		<button type="button" onclick='document.getElementById("demo1").innerHTML="Hello JavaScript!"'>Click Me!</button>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo1").innerHTML="Hello JavaScript!"
+		</code></pre>
+
+		<hr />
+
+		<p>JavaScript can change HTML attributes.</p>
+
+		<h3>Example: change the source attribute of an image</h3>
+
+		<button onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">Turn on light!</button>
+
+		<pre><code class="language-javascript">
+			document.getElementById('myImage').src='images/pic_bulbon.gif
+		</code></pre>
+
+		<img id="myImage" src="images/pic_bulboff.gif" style="width: 100px" />
+
+		<button onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">Turn off light!</button>
+
+		<pre><code class="language-javascript">
+			document.getElementById('myImage').src='images/pic_bulboff.gif
+		</code></pre>
+
+		<hr />
+
+		<p>JavaScript can change the CSS style of and HTML element.</p>
+
+		<h3>Example: change font size of text in paragraph</h3>
+
+		<p id="demo2">Change the size of the font in this paragraph!</p>
+
+		<button type="button" onclick="document.getElementById('demo2').style.fontSize='35px'">Click Me!</button>
+
+		<pre><code class="language-javascript">
+			document.getElementById('demo2').style.fontSize='35px'
+		</code></pre>
+
+		<hr />
+
+		<p>JavaScript can hide HTML elements.</p>
+
+		<h3>Example: hide the following paragraph</h3>
+
+		<p id="demo3">This paragraph will be hidden!</p>
+
+		<button type="button" onclick="document.getElementById('demo3').style.display='none'">Click Me!</button>
+
+		<pre><code class="language-javascript">
+			document.getElementById('demo3').style.display='none'
+		</code></pre>
+
+		<hr />
+
+		<p>JavaScript can show hidden HTML elements.</p>
+
+		<h3>Example: show hidden element (paragraph).</h3>
+
+		<p id="demo4" style="display: none">This hidden paragraph will be shown!</p>
+
+		<button type="button" onclick="document.getElementById('demo4').style.display='block'">Click Me!</button>
+
+		<pre><code class="language-javascript">
+			document.getElementById('demo4').style.display='block'
+		</code></pre>
+
+	</body>
+
+</html>

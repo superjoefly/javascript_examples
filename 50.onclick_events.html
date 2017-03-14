@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Onclick Events</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Onclick Events</h1>
+
+		<h2>onclick (display the date)</h2>
+
+		<p>Click the button to display the date:</p>
+
+		<p id="demo1"></p>
+
+		<button onclick="displayDate()">Display Date</button>
+
+		<script>
+		function displayDate() {
+			document.getElementById("demo1").innerHTML = Date();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function displayDate() {
+				document.getElementById("demo1").innerHTML = Date();
+			}
+		</code></pre>
+
+		<h2>onclick (display a message)</h2>
+
+		<p>Click the button to display a message:</p>
+
+		<p id="demo2"></p>
+
+		<button onclick="myMessage()">Get Message</button>
+
+		<script>
+		function myMessage() {
+			document.getElementById("demo2").innerHTML =
+			"This is the secret message!";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myMessage() {
+				document.getElementById("demo2").innerHTML =
+				"This is the secret message!";
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>ondblclick (change color of tex)</h2>
+
+		<p>Double click the paragraph to chage its color:</p>
+
+		<p ondblclick="changeColor(this)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+
+		<script>
+		function changeColor(x) {
+			x.style.color="red";
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function changeColor(x) {
+				x.style.color="red";
+			}
+		</code></pre>
+
+	</body>
+
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Form Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Form Object</h1>
+
+		<h2>Submit Form</h2>
+
+		<p>Submit a form with a the submit() method:</p>
+
+		<form id="form1" action="">
+			First Name: <input type="text" name="fname" />
+			Last Name: <input type="text" name="lname" />
+			<input type="button" onclick="myFunction1()" value="Submit" />
+		</form>
+
+		<script>
+		function myFunction1() {
+			document.getElementById("form1").submit();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				document.getElementById("form1").submit();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Reset Form</h2>
+
+		<p>Reset a form with the reset() method:</p>
+
+		<form id="form2" action="">
+			First Name: <input type="text" name="fname" />
+			Last Name: <input type="text" name="lname" />
+			<input type="button" onclick="myFunction2()" value="Reset" />
+		</form>
+
+		<script>
+		function myFunction2() {
+			document.getElementById("form2").reset();
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				document.getElementById("form2").reset();
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Value</h2>
+
+		<p>Display the value of each element in a form using a for loop:</p>
+
+		<form id="form3" action="">
+			First Name: <input type="text" name="fname" value="Joe"/>
+			Last Name: <input type="text" name="lname" value="Blow"/>
+			<input type="submit" value="Submit" />
+		</form>
+
+		<br />
+
+		<button onclick="myFunction3()">Display Values</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		function myFunction3() {
+			var x = document.getElementById("form3");
+			var txt = "";
+			var i;
+			for (i = 0; i < x.length; i++) {
+				txt += x.elements[i].value + " ";
+			}
+			document.getElementById("demo3").innerHTML = txt;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				var x = document.getElementById("form3");
+				var txt = "";
+				var i;
+				for (i = 0; i < x.length; i++) {
+					txt += x.elements[i].value + " ";
+				}
+				document.getElementById("demo3").innerHTML = txt;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Character Set</h2>
+
+		<p>Find the accepted character set of a form:</p>
+
+		<form id="form4" action="" accept-charset="ISO-8859-1">
+			First Name: <input type="text" name="fname" value="Daffy" />
+			Last Name: <input type="text" name="lname" value="Duck" />
+		</form>
+
+		<br />
+
+		<button onclick="myFunction4()">Get Charset</button>
+
+		<p id="demo4"></p>
+
+		<script>
+		function myFunction4() {
+			var x = document.getElementById("form4").acceptCharset;
+			document.getElementById("demo4").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction4() {
+				var x = document.getElementById("form4").acceptCharset;
+				document.getElementById("demo4").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Action Attribute</h2>
+
+		<p>Find the action attribute of a form:</p>
+
+		<form id="form5" action="example.php" accept-charset="ISO-8859-1">
+			First Name: <input type="text" name="fname" value="Daffy" />
+			Last Name: <input type="text" name="lname" value="Duck" />
+		</form>
+
+		<br />
+
+		<button onclick="myFunction5()">Get Action</button>
+
+		<p id="demo5"></p>
+
+		<script>
+		function myFunction5() {
+			var x = document.getElementById("form5").action;
+			document.getElementById("demo5").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction5() {
+				var x = document.getElementById("form5").action;
+				document.getElementById("demo5").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Encrypt Attribute</h2>
+
+		<p>Get the value of the encrypt attribute in a form:</p>
+
+		<form id="form6" action="#" method="post">
+			First Name: <input type="text" name="fname" value="Donald" />
+			Last Name: <input type="text" name="lname" value="Duck" />
+			<input type="submit" value="Submit" />
+		</form>
+
+		<br />
+
+		<button onclick="myFunction6()">Get Encrypt</button>
+
+		<p id="demo6"></p>
+
+		<script>
+		function myFunction6() {
+			var x = document.getElementById("form6").enctype;
+			document.getElementById("demo6").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction6() {
+				var x = document.getElementById("form6").enctype;
+				document.getElementById("demo6").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Elements</h2>
+
+		<p>Find the number of elements in a form:</p>
+
+		<form id="form7" action="#" method="post">
+			First Name: <input type="text" name="fname" value="Duffy" />
+			Last Name: <input type="text" name="lname" value="Dog" />
+			<input type="submit" value="Submit" />
+		</form>
+
+		<br />
+
+		<button onclick="myFunction7()">Get Elements #</button>
+
+		<p id="demo7"></p>
+
+		<script>
+		function myFunction7() {
+			var x = document.getElementById("form7").length;
+			document.getElementById("demo7").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction7() {
+				var x = document.getElementById("form7").length;
+				document.getElementById("demo7").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Method</h2>
+
+		<p>Get the method for sending form data:</p>
+
+		<form id="form8" action="#" method="get">
+			First Name: <input type="text" name="fname" value="Duffy" />
+			Last Name: <input type="text" name="lname" value="Dog" />
+			<input type="submit" value="Submit" />
+		</form>
+
+		<br />
+
+		<button onclick="myFunction8()">Find Method</button>
+
+		<p id="demo8"></p>
+
+		<script>
+		function myFunction8() {
+			var x = document.getElementById("form8").method;
+			document.getElementById("demo8").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction8() {
+				var x = document.getElementById("form8").method;
+				document.getElementById("demo8").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Name</h2>
+
+		<p>Find the name of a form:</p>
+
+		<form action="" name="myForm" id="form9">
+			First Name: <input type="text" name="fname" value="Joe" />
+			Last Name: <input type="text" name="lname" value="Blow" />
+			<input type="submit" value="Submit" />
+		</form>
+
+		<br />
+
+		<button onclick="myFunction9()">Get Name</button>
+
+		<p id="demo9"></p>
+
+		<script>
+		function myFunction9() {
+			var x = document.getElementById("form9").name;
+			document.getElementById("demo9").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction9() {
+				var x = document.getElementById("form9").name;
+				document.getElementById("demo9").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Target</h2>
+
+		<p>Find the target of a form:</p>
+
+		<form id="form10" action="" target="_self">
+			First Name: <input type="text" name="fname" value="Billy" />
+			Last Name: <input type="text" name="lname" value="Bob" />
+			<input type="submit" value="Submit" />
+		</form>
+
+		<br />
+
+		<button onclick="myFunction10()">Get Target</button>
+
+		<p id="demo10"></p>
+
+		<script>
+		function myFunction10() {
+			var x = document.getElementById("form10").target;
+			document.getElementById("demo10").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction10() {
+				var x = document.getElementById("form10").target;
+				document.getElementById("demo10").innerHTML = x;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

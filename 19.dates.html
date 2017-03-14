@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Dates</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>JavaScript Dates</h1>
+
+		<p>The Date object lets you work with dates (years, months, days, hours, minutes, seconds, and milliseconds).</p>
+
+		<hr />
+
+		<h2>Date()</h2>
+
+		<p>Use Date() to display today's date and time:</p>
+
+		<p id="demo1"></p>
+
+		<script>
+		document.getElementById("demo1").innerHTML = Date();
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo1").innerHTML = Date();
+		</code></pre>
+
+		<hr />
+
+		<h2>getFullYear()</h2>
+
+		<p>Use getFullYear() to display the year:</p>
+
+		<p id="demo2"></p>
+
+		<script>
+		var d = new Date();
+		document.getElementById("demo2").innerHTML =
+		d.getFullYear();
+		</script>
+
+		<pre><code class="language-javascript">
+			var d = new Date();
+			document.getElementById("demo2").innerHTML =
+			d.getFullYear();
+		</code></pre>
+
+		<hr />
+
+		<h2>getTime()</h2>
+
+		<p>Use getTime() to calculate the number of milliseconds since 1970:</p>
+
+		<p id="demo3"></p>
+
+		<script>
+		var d = new Date();
+		document.getElementById("demo3").innerHTML =
+		d.getTime();
+		</script>
+
+		<pre><code class="language-javascript">
+			var d = new Date();
+			document.getElementById("demo3").innerHTML =
+			d.getTime();
+		</code></pre>
+
+		<hr />
+
+		<h2>setFullYear()</h2>
+
+		<p>Use setFullYear() to set a specific date:</p>
+
+		<p id="demo4"></p>
+
+		<script>
+		var d = new Date();
+		d.setFullYear(2020, 10, 10);
+		document.getElementById("demo4").innerHTML = d;
+		</script>
+
+		<pre><code class="language-javascript">
+			var d = new Date();
+			d.setFullYear(2020, 10, 10);
+			document.getElementById("demo4").innerHTML = d;
+		</code></pre>
+
+		<hr />
+
+		<h2>toUTCString()</h2>
+
+		<p>Use toUTCString() to convert today's date (according to UTC) to a string:</p>
+
+		<p id="demo5"></p>
+
+		<script>
+		var d = new Date();
+		document.getElementById("demo5").innerHTML = d.toUTCString();
+		</script>
+
+		<pre><code class="language-javascript">
+			var d = new Date();
+			document.getElementById("demo5").innerHTML = d.toUTCString();
+		</code></pre>
+
+		<hr />
+
+		<h2>getDay() - weekday as number</h2>
+
+		<p>Use getDay() to return the weekday as a number:</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		var d = new Date();
+		document.getElementById("demo6").innerHTML =
+		d.getDay();
+		</script>
+
+		<pre><code class="language-javascript">
+			var d = new Date();
+			document.getElementById("demo6").innerHTML =
+			d.getDay();
+		</code></pre>
+
+		<hr />
+
+		<h2>getDay() - weekday as name</h2>
+
+		<p>Use getDay() with an array to return weekday as a name:</p>
+
+		<p id="demo7"></p>
+
+		<script>
+		var d = new Date();
+		var days = [
+			"Sunday",
+			"Monday",
+			"Tuesday",
+			"Wednesday",
+			"Thursday",
+			"Friday",
+			"Satuday"
+		];
+		document.getElementById("demo7").innerHTML = days[d.getDay()];
+		</script>
+
+		<pre><code class="language-javascript">
+			var d = new Date();
+			var days = [
+				"Sunday",
+				"Monday",
+				"Tuesday",
+				"Wednesday",
+				"Thursday",
+				"Friday",
+				"Satuday"
+			];
+			document.getElementById("demo7").innerHTML = days[d.getDay()];
+		</code></pre>
+
+		<hr />
+
+		<h2>Clock Function</h2>
+
+		<p>Display a clock:</p>
+
+		<button onclick="startTime()">Display Clock</button>
+
+		<div id="txt"></div>
+
+		<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+
+			document.getElementById("txt").innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};
+			return i;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function startTime() {
+				var today = new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+
+				document.getElementById("txt").innerHTML =
+				h + ":" + m + ":" + s;
+				var t = setTimeout(startTime, 500);
+			}
+
+			function checkTime(i) {
+				if (i < 10) {i = "0" + i};
+				return i;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

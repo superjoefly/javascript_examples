@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>DOM Output</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>DOM Output</h1>
+
+		<h2>Number of Links</h2>
+
+		<p>Display the number of anchor links in a document:</p>
+
+		<a href="home">Home</a>
+		<a href="about">About</a>
+		<a href="more">More</a>
+
+		<button onclick="myFunction()">Try It</button>
+
+		<p id="demo1"></p>
+
+		<script>
+		function myFunction() {
+			var x = document.links.length;
+			document.getElementById("demo1").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction() {
+				var x = document.links.length;
+				document.getElementById("demo1").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>First Link</h2>
+
+		<p>Display the innerHTML of the first anchor link in a document:</p>
+
+		<a href="home">Home</a>
+		<a href="about">About</a>
+		<a href="more">More</a>
+
+		<p id="demo2"></p>
+
+		<button onclick="myFunction2()">Try It</button>
+
+		<script>
+		function myFunction2() {
+			document.getElementById("demo2").innerHTML =
+			document.links[0].innerHTML;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				document.getElementById("demo2").innerHTML =
+				document.links[0].innerHTML;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>Forms Collection</h2>
+
+		<p>Display the number of forms in a document:</p>
+
+		<form action="">
+			First Name: <input type="text" name="fname" value="Daffy" />
+			Last Name: <input type="text" name="lname" value="Duck" />
+			<input type="submit" value="Submit" />
+		</form>
+
+		<p id="demo3"></p>
+
+		<script>
+		document.getElementById("demo3").innerHTML =
+		document.forms.length;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo3").innerHTML =
+			document.forms.length;
+		</code></pre>
+
+		<p>Display the name of the first form in a document:</p>
+
+		<form action="" name="myForm">
+			First Name: <input type="text" name="fname" value="Daffy" />
+			Last Name: <input type="text" name="lname" value="Duck" />
+			<input type="submit" value="Submit" />
+		</form>
+
+		<p id="demo4"></p>
+
+		<script>
+		document.getElementById("demo4").innerHTML =
+		document.forms[1].name;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo4").innerHTML =
+			document.forms[1].name;
+		</code></pre>
+
+		<hr />
+
+		<h2>Images Collection</h2>
+
+		<p>Display the number of images in a document:</p>
+
+		<p id="demo5"></p>
+
+		<img src="images/dom.gif" id="myImg" alt="Document Object Model"/>
+
+		<script>
+		document.getElementById("demo5").innerHTML =
+		document.images.length;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo5").innerHTML =
+			document.images.length;
+		</code></pre>
+
+		<p>Display the id of the first image in a document:</p>
+
+		<p id="demo6"></p>
+
+		<script>
+		document.getElementById("demo6").innerHTML =
+		document.images[0].id;
+		</script>
+
+		<pre><code class="language-javascript">
+			document.getElementById("demo6").innerHTML =
+			document.images[0].id;
+		</code></pre>
+
+		<hr />
+
+		<h2>CSS Manipulation</h2>
+
+		<p>Change the visibility of an element:</p>
+
+		<p id="demo7"><span id="p1">This is some text!</span></p>
+
+		<button onclick="myFunction3()">Try It!</button>
+
+		<script>
+		function myFunction3() {
+			var x = document.getElementById("p1");
+			if (x.style.visibility === 'hidden') {
+				x.style.visibility = 'visible';
+			}	else {
+				x.style.visibility = 'hidden';
+			}
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				var x = document.getElementById("p1");
+				if (x.style.visibility === 'hidden') {
+					x.style.visibility = 'visible';
+				}	else {
+					x.style.visibility = 'hidden';
+				}
+			}
+		</code></pre>
+
+		<p>Change the background-color of an element:</p>
+
+		<button onclick="myFunction4()">Try It!</button>
+
+		<div id="div1" style="background-color: red; height: 50px; width: 100px; margin: 10px;"></div>
+
+		<script>
+		function myFunction4() {
+			var x = document.getElementById("div1");
+			if (x.style.backgroundColor === "red") {
+				x.style.backgroundColor = "blue";
+			} else {
+				x.style.backgroundColor = "red";
+			}
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction4() {
+				var x = document.getElementById("div1");
+				if (x.style.backgroundColor === "red") {
+					x.style.backgroundColor = "blue";
+				} else {
+					x.style.backgroundColor = "red";
+				}
+			}
+		</code></pre>
+
+	</body>
+
+</html>

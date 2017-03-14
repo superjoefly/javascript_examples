@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>Anchor Object</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+
+		<h1>Anchor Object</h1>
+
+		<h2>href Attribute</h2>
+
+		<p>Find the value of an href attribute of a link:</p>
+
+		<a href="http://www.w3schools.com" id="anchor1">W3Schools</a>
+
+		<br /><br />
+
+		<button onclick="myFunction1()">Get Value</button>
+
+		<p id="demo1"></p>
+
+		<script>
+		function myFunction1() {
+			var x = document.getElementById("anchor1").href;
+			document.getElementById("demo1").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction1() {
+				var x = document.getElementById("anchor1").href;
+				document.getElementById("demo1").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>hreflang Attribute</h2>
+
+		<p>Find the value of the hreflang attribute of a link:</p>
+
+		<a href="http://www.w3schools.com" id="anchor2" hreflang="en-us">W3Schools</a>
+
+		<br /><br />
+
+		<button onclick="myFunction2()">Get hreflang</button>
+
+		<p id="demo2"></p>
+
+		<script>
+		function myFunction2() {
+			var x = document.getElementById("anchor2").hreflang;
+			document.getElementById("demo2").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction2() {
+				var x = document.getElementById("anchor2").hreflang;
+				document.getElementById("demo2").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>id Attribute</h2>
+
+		<p>Find the value of the id attribute of a link:</p>
+
+		<a href="http://www.w3schools.com" id="anchor3">W3Schools</a>
+
+		<br /><br />
+
+		<button onclick="myFunction3()">Get ID</button>
+
+		<p id="demo3"></p>
+
+		<script>
+		function myFunction3() {
+			var x = document.getElementById("anchor3").id;
+			document.getElementById("demo3").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction3() {
+				var x = document.getElementById("anchor3").id;
+				document.getElementById("demo3").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>rel Attribute</h2>
+
+		<p>Find the value of the rel attribute of a link:</p>
+
+		<a href="http://www.w3schools.com" rel="nofollow" id="anchor4">W3Schools</a>
+
+		<br /><br />
+
+		<button onclick="myFunction4()">Get Rel</button>
+
+		<p id="demo4"></p>
+
+		<script>
+		function myFunction4() {
+			var x = document.getElementById("anchor4").rel;
+			document.getElementById("demo4").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction4() {
+				var x = document.getElementById("anchor4").rel;
+				document.getElementById("demo4").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>target Attribute</h2>
+
+		<p>Find the value of the target attribute of a link:</p>
+
+		<a href="http://www.w3schools.com" target = "_self" id="anchor5">W3Schools</a>
+
+		<br /><br />
+
+		<button onclick="myFunction5()">Get Target</button>
+
+		<p id="demo5"></p>
+
+		<script>
+		function myFunction5() {
+			var x = document.getElementById("anchor5").target;
+			document.getElementById("demo5").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction5() {
+				var x = document.getElementById("anchor5").target;
+				document.getElementById("demo5").innerHTML = x;
+			}
+		</code></pre>
+
+		<hr />
+
+		<h2>type Attribute</h2>
+
+		<p>Find the value of the type attribute of a link:</p>
+
+		<a href="http://www.w3schools.com" type="text/html" id="anchor6">W3Schools</a>
+
+		<br /><br />
+
+		<button onclick="myFunction6()">Get Type</button>
+
+		<p id="demo6"></p>
+
+		<script>
+		function myFunction6() {
+			var x = document.getElementById("anchor6").type;
+			document.getElementById("demo6").innerHTML = x;
+		}
+		</script>
+
+		<pre><code class="language-javascript">
+			function myFunction6() {
+				var x = document.getElementById("anchor6").type;
+				document.getElementById("demo6").innerHTML = x;
+			}
+		</code></pre>
+
+	</body>
+
+</html>

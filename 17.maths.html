@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+	  <title>JavaScript Maths</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="styles.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link href="prism.css" rel="stylesheet" />
+		<script src="scripts/prism.js"></script>
+	  <style>
+	  * {
+		  box-sizing: border-box;
+		  }
+	  </style>
+
+	</head>
+
+	<body class="w3-margin">
+	<h1>JavaScript Maths</h1>
+
+	<p>A JavaScript Math object allows you to perform mathematical tasks on numbers.</p>
+
+	<h2>Math.PI</h2>
+
+	<p>Math.PI returns the ratio of a circles circumference to its diameter:</p>
+
+	<p id="demo1"></p>
+
+	<script>
+	document.getElementById("demo1").innerHTML = Math.PI;
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo1").innerHTML = Math.PI;
+	</code></pre>
+
+	<hr />
+
+	<h2>Math.round(x)</h2>
+
+	<p>Math.round(x) returns the value of x rounded down to its nearest integer:</p>
+
+	<p id="demo2"></p>
+
+	<script>
+	document.getElementById("demo2").innerHTML =
+	Math.round(4.4);
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo2").innerHTML =
+		Math.round(4.4);
+	</code></pre>
+
+	<hr />
+
+	<h2>Math.pow(x,y)</h2>
+
+	<p>Math.pow(x,y) returns the value of x to the power of y:</p>
+
+	<p id="demo3"></p>
+
+	<script>
+	document.getElementById("demo3").innerHTML =
+	Math.pow(8,2);
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo3").innerHTML =
+		Math.pow(8,2);
+	</code></pre>
+
+	<hr />
+
+	<h2>Math.sqrt(x)</h2>
+
+	<p>Math.sqrt(x) returns the square root of x:</p>
+
+	<p id="demo4"></p>
+
+	<script>
+	document.getElementById("demo4").innerHTML =
+	Math.sqrt(49);
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo4").innerHTML =
+		Math.sqrt(49);
+	</code></pre>
+
+	<hr />
+
+	<h2>Math.abs(x)</h2>
+
+	<p>Math.abs(x) returns the absolute (positive) value of x:</p>
+
+	<p id="demo5"></p>
+
+	<script>
+	document.getElementById("demo5").innerHTML =
+	Math.abs(-2.2);
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo5").innerHTML =
+		Math.abs(-2.2);
+	</code></pre>
+
+	<hr />
+
+	<h2>Math.ceil(x)</h2>
+
+	<p>Math.ceil(x) returns the value of x rounded up:</p>
+
+	<p id="demo6"></p>
+
+	<script>
+	document.getElementById("demo6").innerHTML =
+	Math.ceil(3.3);
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo6").innerHTML =
+		Math.ceil(3.3);
+	</code></pre>
+
+	<hr />
+
+	<h2>Math.floor(x)</h2>
+
+	<p>Math.floor(x) returns the value of x rounded down:</p>
+
+	<p id="demo7"></p>
+
+	<script>
+	document.getElementById("demo7").innerHTML =
+	Math.floor(8.7);
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo7").innerHTML =
+		Math.floor(8.7);
+	</code></pre>
+
+	<hr />
+
+	<h2>Math.sin(x)</h2>
+
+	<p>Math.sin(x) returns the sin of the angle x (given in radians):</p>
+
+	<p>Angle in radians = (angle in degrees) * PI / 180</p>
+
+	<p id="demo8"></p>
+
+	<script>
+	document.getElementById("demo8").innerHTML = "The sin value of 90 degrees is " + Math.sin(90 * Math.PI/180);
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo8").innerHTML = "The sin value of 90 degrees is " + Math.sin(90 * Math.PI/180);
+	</code></pre>
+
+	<hr />
+
+	<h2>Math.cos(x)</h2>
+
+	<p>Math.cos(x) returns the cosin of x (given in radians):</p>
+
+	<p>Angle in radians = (angle in degrees) * PI / 180</p>
+
+	<p id="demo9"></p>
+
+	<script>
+	document.getElementById("demo9").innerHTML =
+	"The cosine value of 0 degrees is " + Math.cos(0 * Math.PI / 180);
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo9").innerHTML =
+		"The cosine value of 0 degrees is " + Math.cos(0 * Math.PI / 180);
+	</code></pre>
+
+	<hr />
+
+	<h2>Math.max()</h2>
+
+	<p>Math.max() returns the highest value in a list of arguments:</p>
+
+	<p id="demo10"></p>
+
+	<script>
+	document.getElementById("demo10").innerHTML =
+	Math.max(0, 80, 300, 20, -5);
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo10").innerHTML =
+		Math.max(0, 80, 300, 20, -5);
+	</code></pre>
+
+	<hr />
+
+	<h2>Math.min()</h2>
+
+	<p>Math.min() returns the lowest value in a list of arguments:</p>
+
+	<p id="demo11"></p>
+
+	<script>
+	document.getElementById("demo11").innerHTML =
+	Math.min(0, 80, 300, 20, -5);
+	</script>
+
+	<pre><code class="language-javascript">
+		document.getElementById("demo11").innerHTML =
+		Math.min(0, 80, 300, 20, -5);
+	</code></pre>
+
+	<h2>Exercise: convert value into Fahrenheit and Celsius</h2>
+
+	<p><strong>Note:</strong> the Math.round() method is used so that the result will be returned as an integer.</p>
+
+	<p>Input a number below:</p>
+
+	<p><input id="c" onkeyup="convert('C')" />degrees Celsius</p>
+
+	<p><input id="f" onkeyup="convert('F')" />degrees Fahrenheit</p>
+
+	<script>
+	function convert(degree) {
+		var x;
+		if (degree == 'C') {
+			x = document.getElementById("c").value * 9 / 5 + 32;
+			document.getElementById("f").value = Math.round(x);
+
+		} else {
+			x = (document.getElementById("f").value - 32) * 5 / 9;
+			document.getElementById("c").value = Math.round(x);
+		}
+	}
+	</script>
+
+	<pre><code class="language-javascript">
+		function convert(degree) {
+			var x;
+			if (degree == 'C') {
+				x = document.getElementById("c").value * 9 / 5 + 32;
+				document.getElementById("f").value = Math.round(x);
+
+			} else {
+				x = (document.getElementById("f").value - 32) * 5 / 9;
+				document.getElementById("c").value = Math.round(x);
+			}
+		}
+	</code></pre>
+
+	</body>
+
+</html>
