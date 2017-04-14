@@ -7,28 +7,34 @@ h1 {
   color: #272644;
 }
 
+/*code snippet size for large screens*/
 @media screen and (min-width: 800px) {
 p, pre code {
   font-size: 1.2em;
 }
 }
 
+/*color for demo results*/
 p[id^="demo"]::before {
   content: "Result: ";
   color: red;
 }
 
+/*container for ul*/
 .container {
   display: flex;
+  margin-bottom: 100px;
 }
 
+
+/*list of links*/
 ul {
   margin: 0;
   padding: 0;
   flex: 1 1 0;
 }
 
-li {
+ul li {
   list-style-type: none;
 }
 
@@ -47,4 +53,58 @@ ul li a:hover {
 .subj {
   font-size: 24px;
   color: #272644;
+}
+
+/*NavBar*/
+
+nav ul {
+border-top: 1px solid silver;
+background-color: black;
+list-style-type: none;
+margin: 0;
+margin-left: -16px;
+padding: 0;
+overflow: hidden;
+position: fixed;
+bottom: 0;
+width: 100%;
+animation: ani1 3s linear 2s infinite alternate;
+}
+
+@keyframes ani1 {
+from {border-top: 1px solid silver;}
+to {border-top: 1px solid red;}
+}
+
+nav ul li {
+border-right: 1px solid silver;
+display: inline-block;
+}
+
+nav ul li:last-child {
+border-right: none;
+float: right;
+}
+
+nav ul li a {
+font-size: 1.2em;
+padding: 8px 12px;
+text-decoration: none;
+color: white !important;
+}
+
+
+@media all and (max-width: 600px) {
+nav ul li a {
+font-size: 1em;
+padding: 5px;
+}
+
+nav ul li:nth-child(4) {
+  display: none;
+}
+
+p {
+font-size: 1em;
+}
 }
